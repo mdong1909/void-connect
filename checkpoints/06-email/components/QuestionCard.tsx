@@ -1,0 +1,22 @@
+import type { Question } from "../lib/questions";
+
+type QuestionCardProps = {
+  question: Question;
+};
+
+export function QuestionCard({ question }: QuestionCardProps) {
+  const author = question.authorName || "Site visitor";
+
+  return (
+    <li className="questionCard">
+      <div className="votePill">Q</div>
+      <div>
+        <p className="questionText">{question.text}</p>
+        <p className="questionMeta">
+          {author} · Saved {question.createdAt}
+        </p>
+      </div>
+    </li>
+  );
+}
+

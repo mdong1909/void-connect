@@ -1,0 +1,24 @@
+{
+  "name": "live-qa-01-static-starter",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite dev",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@void/react": "0.27.0",
+    "react": "19.3.0",
+    "react-dom": "19.3.0",
+    "valibot": "1.5.0"
+  },
+  "devDependencies": {
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "typescript": "7.0.2",
+    "vite": "8.3.4",
+    "void": "0.27.0"
+  }
+}
+

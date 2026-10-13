@@ -1,0 +1,8 @@
+node_modules
+dist
+.void
+.env
+.env.*
+*.local
+.DS_Store
+

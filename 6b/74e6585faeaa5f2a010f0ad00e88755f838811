@@ -1,0 +1,41 @@
+checkpoints/02-database/pages/layout.tsx
+  s_013561f605d7b6::t_26608db197408b 9
+checkpoints/02-database/void.config.ts
+  s_013561f605d7b6::t_17441bec75a4a5 4-11
+checkpoints/03-websockets/pages/layout.tsx
+  s_013561f605d7b6::t_aa5d1dc4f11880 9
+checkpoints/03-websockets/void.config.ts
+  s_013561f605d7b6::t_4a70367005e1f0 4-11
+checkpoints/04-ai/pages/layout.tsx
+  s_013561f605d7b6::t_0cb9765abce167 9
+checkpoints/04-ai/void.config.ts
+  s_013561f605d7b6::t_fa266c932a3209 4-11
+checkpoints/05-auth/pages/layout.tsx
+  s_013561f605d7b6::t_b65ffbc4f9af41 9
+checkpoints/05-auth/void.config.ts
+  s_013561f605d7b6::t_1c356049d4ec6d 4-11
+checkpoints/06-email/pages/layout.tsx
+  s_013561f605d7b6::t_317fb513a9e67f 9
+checkpoints/06-email/void.config.ts
+  s_013561f605d7b6::t_f37b9b2a9292af 4-11
+working-repo/pages/layout.tsx
+  s_013561f605d7b6::t_4e05e27a52702f 9
+working-repo/void.config.ts
+  s_013561f605d7b6::t_616591ef24c6bd 3-12
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "6b74e6585faeaa5f2a010f0ad00e88755f838811",
+  "prompts": {},
+  "sessions": {
+    "s_013561f605d7b6": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a1335e-f53a-7e32-935d-78bba6eab2a3",
+        "model": "gpt-5.5"
+      },
+      "human_author": "mdong <mdong@cloudflare.com>"
+    }
+  }
+}

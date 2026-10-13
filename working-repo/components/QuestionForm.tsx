@@ -1,4 +1,4 @@
-import { useState } from "react";
+import type { FormEvent } from "react";
 
 type QuestionFormProps = {
   onSubmit?: (text: string) => void;
@@ -6,32 +6,40 @@ type QuestionFormProps = {
 };
 
 export function QuestionForm({ onSubmit, disabled = false }: QuestionFormProps) {
-  const [text, setText] = useState("");
   const isClientOnly = Boolean(onSubmit);
+
+  function submit(event: FormEvent<HTMLFormElement>) {
+    if (!onSubmit) return;
+
+    event.preventDefault();
+
+    const form = event.currentTarget;
+    const value = new FormData(form).get("text");
+
+    if (typeof value !== "string") return;
+
+    const text = value.trim();
+
+    if (!text) return;
+
+    onSubmit(text);
+    form.reset();
+  }
 
   return (
     <form
       className="questionForm"
       method={isClientOnly ? undefined : "post"}
-      onSubmit={(event) => {
-        if (!onSubmit) return;
-        event.preventDefault();
-        const value = text.trim();
-        if (!value) return;
-        onSubmit(value);
-        setText("");
-      }}
+      onSubmit={submit}
     >
       <input
         name="text"
-        value={text}
-        onChange={(event) => setText(event.target.value)}
         placeholder="Ask a question for the room"
         aria-label="Question"
         disabled={disabled}
         required
       />
-      <button type="submit" disabled={disabled || (isClientOnly && !text.trim())}>
+      <button type="submit" disabled={disabled}>
         Submit
       </button>
     </form>

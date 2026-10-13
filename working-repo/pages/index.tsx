@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { QuestionForm } from "../components/QuestionForm";
 import { QuestionList } from "../components/QuestionList";
 import { sampleQuestions } from "../lib/questions";
@@ -6,6 +6,7 @@ import type { Question } from "../lib/questions";
 
 const adjectives = ["Bright", "Curious", "Helpful", "Kind", "Sharp", "Sunny"];
 const nouns = ["Builder", "Coder", "Guest", "Maker", "Reader", "Visitor"];
+const usernameStorageKey = "live-qa-username";
 
 function createUsername() {
   const adjective = adjectives[Math.floor(Math.random() * adjectives.length)];
@@ -15,9 +16,24 @@ function createUsername() {
   return `${adjective}${noun}${number}`;
 }
 
+function getStoredUsername() {
+  const saved = sessionStorage.getItem(usernameStorageKey);
+
+  if (saved) return saved;
+
+  const username = createUsername();
+  sessionStorage.setItem(usernameStorageKey, username);
+
+  return username;
+}
+
 export default function Page() {
   const [questions, setQuestions] = useState<Question[]>(sampleQuestions);
-  const [username] = useState(createUsername);
+  const [username, setUsername] = useState("");
+
+  useEffect(() => {
+    setUsername(getStoredUsername());
+  }, []);
 
   function addQuestion(text: string) {
     const id =
@@ -29,7 +45,7 @@ export default function Page() {
       {
         id,
         text,
-        author: username,
+        author: username || "Anonymous Visitor",
         votes: 0,
         createdAt: "Just now",
       },
@@ -40,7 +56,12 @@ export default function Page() {
   return (
     <main className="appShell">
       <section className="intro">
-        <p className="eyebrow">Live Workshop</p>
+        <div className="introBar">
+          <p className="eyebrow">Live Workshop</p>
+          <p className="usernameBadge">
+            Posting as <strong>{username || "Assigning name"}</strong>
+          </p>
+        </div>
         <h1>Live Q&A Queue</h1>
         <p>
           Submit questions during the session and keep the most useful topics

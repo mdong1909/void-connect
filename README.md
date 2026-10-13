@@ -38,11 +38,19 @@ Checkpoint status:
 
 ## Install Troubleshooting
 
-If `npm install` fails while downloading an `@cloudflare/*` package, check whether your machine has a custom scoped registry:
+Each app folder includes a local `.npmrc` that sends `@cloudflare/*` packages to the public npm registry.
+
+If `npm install` still fails while downloading an `@cloudflare/*` package, check whether your machine is overriding the scoped registry:
 
 ```bash
 npm config get @cloudflare:registry
 ```
 
-Ask the workshop helper which registry should be used for the session.
+For this workshop, it should resolve to:
+
+```txt
+https://registry.npmjs.org/
+```
+
+If it does not, ask the workshop helper before changing your global npm config.
 

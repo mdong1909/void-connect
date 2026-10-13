@@ -34,35 +34,22 @@ input {
   margin-bottom: 28px;
 }
 
-.introBar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 12px;
-  margin-bottom: 8px;
-}
-
 .eyebrow {
-  margin: 0;
+  margin: 0 0 8px;
   color: #556170;
   font-size: 0.85rem;
   font-weight: 700;
   text-transform: uppercase;
 }
 
-.usernameBadge {
-  margin: 0;
-  padding: 6px 10px;
-  border: 1px solid #dfe4eb;
-  border-radius: 999px;
-  background: #ffffff;
+.postingIdentity {
+  margin: 8px 0 0;
   color: #556170;
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   font-weight: 600;
-  white-space: nowrap;
 }
 
-.usernameBadge strong {
+.postingIdentity strong {
   color: #18202f;
   font-weight: 800;
 }
@@ -327,16 +314,6 @@ h2 {
     align-items: flex-start;
     flex-direction: column;
     gap: 4px;
-  }
-
-  .introBar {
-    align-items: flex-start;
-    flex-direction: column;
-    gap: 8px;
-  }
-
-  .usernameBadge {
-    white-space: normal;
   }
 
   .authForm {

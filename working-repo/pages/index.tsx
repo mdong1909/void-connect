@@ -56,12 +56,7 @@ export default function Page() {
   return (
     <main className="appShell">
       <section className="intro">
-        <div className="introBar">
-          <p className="eyebrow">Live Workshop</p>
-          <p className="usernameBadge">
-            Posting as <strong>{username || "Assigning name"}</strong>
-          </p>
-        </div>
+        <p className="eyebrow">Live Workshop</p>
         <h1>Live Q&A Queue</h1>
         <p>
           Submit questions during the session and keep the most useful topics
@@ -74,6 +69,9 @@ export default function Page() {
           <h2>Ask a Question</h2>
         </div>
         <QuestionForm onSubmit={addQuestion} />
+        <p className="postingIdentity">
+          Posting as <strong>{username || "Assigning name"}</strong>
+        </p>
       </section>
 
       <section className="panel">

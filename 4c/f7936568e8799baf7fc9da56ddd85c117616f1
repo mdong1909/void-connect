@@ -1,0 +1,245 @@
+.gitignore
+  s_013561f605d7b6::t_30a26e8ab9760d 1-8
+README.md
+  s_013561f605d7b6::t_275bc0cfa4064f 1-43
+checkpoints/01-static-starter/.gitignore
+  s_013561f605d7b6::t_9e2fe0250a3cb4 1-7
+checkpoints/01-static-starter/README.md
+  s_013561f605d7b6::t_47f81256013529 1-11
+checkpoints/01-static-starter/components/AuthPanel.tsx
+  s_013561f605d7b6::t_542281532ca0a2 1-135
+checkpoints/01-static-starter/components/QuestionCard.tsx
+  s_013561f605d7b6::t_7d0e4fb89422d7 1-23
+checkpoints/01-static-starter/components/QuestionForm.tsx
+  s_013561f605d7b6::t_2cac4ef4e08924 1-40
+checkpoints/01-static-starter/components/QuestionList.tsx
+  s_013561f605d7b6::t_8a2b8372475367 1-21
+checkpoints/01-static-starter/lib/questions.ts
+  s_013561f605d7b6::t_eacc7039c0681c 1-34
+checkpoints/01-static-starter/package.json
+  s_013561f605d7b6::t_d671e274cd0b8c 1-24
+checkpoints/01-static-starter/pages/index.tsx
+  s_013561f605d7b6::t_2e4675c8a56509 1-61
+checkpoints/01-static-starter/pages/layout.tsx
+  s_013561f605d7b6::t_c0e8b79411eab1 1-20
+checkpoints/01-static-starter/routes/.gitkeep
+  s_013561f605d7b6::t_29aa15122b6fef 1
+checkpoints/01-static-starter/styles/app.css
+  s_013561f605d7b6::t_50c5e28f8450f5 1-325
+checkpoints/01-static-starter/tsconfig.json
+  s_013561f605d7b6::t_16f3957383b069 1-21
+checkpoints/01-static-starter/vite.config.ts
+  s_013561f605d7b6::t_ab2adf3bc58972 1-8
+checkpoints/01-static-starter/void.config.ts
+  s_013561f605d7b6::t_2485cdc5851f24 1-4
+checkpoints/02-database/.gitignore
+  s_013561f605d7b6::t_e921f230d157cf 1-7
+checkpoints/02-database/README.md
+  s_013561f605d7b6::t_ea5e005fb6429e 1-12
+checkpoints/02-database/components/AuthPanel.tsx
+  s_013561f605d7b6::t_3587a58e57169e 1-135
+checkpoints/02-database/components/QuestionCard.tsx
+  s_013561f605d7b6::t_a974de9355b041 1-22
+checkpoints/02-database/components/QuestionForm.tsx
+  s_013561f605d7b6::t_290083e3bbddca 1-40
+checkpoints/02-database/components/QuestionList.tsx
+  s_013561f605d7b6::t_125c68c5c0f5c0 1-21
+checkpoints/02-database/db/schema.ts
+  s_013561f605d7b6::t_3e62e6465b37e8 1-11
+checkpoints/02-database/lib/questions.ts
+  s_013561f605d7b6::t_dbdf4e513e66f4 1-8
+checkpoints/02-database/package.json
+  s_013561f605d7b6::t_94a299c118a556 1-26
+checkpoints/02-database/pages/index.server.ts
+  s_013561f605d7b6::t_49388bd669a979 1-29
+checkpoints/02-database/pages/index.tsx
+  s_013561f605d7b6::t_3e04bc12f41b0b 1-37
+checkpoints/02-database/pages/layout.tsx
+  s_013561f605d7b6::t_ff5d0dccc168c2 1-20
+checkpoints/02-database/routes/.gitkeep
+  s_013561f605d7b6::t_dd66c93cac1014 1
+checkpoints/02-database/styles/app.css
+  s_013561f605d7b6::t_86ebc4a142a727 1-325
+checkpoints/02-database/tsconfig.json
+  s_013561f605d7b6::t_7a393bf43af15f 1-24
+checkpoints/02-database/vite.config.ts
+  s_013561f605d7b6::t_6c3c9219ff7716 1-8
+checkpoints/02-database/void.config.ts
+  s_013561f605d7b6::t_2cf786ff359b9f 1-10
+checkpoints/03-websockets/.gitignore
+  s_013561f605d7b6::t_75651638d6a88d 1-7
+checkpoints/03-websockets/README.md
+  s_013561f605d7b6::t_45b5696c15fd25 1-12
+checkpoints/03-websockets/components/AuthPanel.tsx
+  s_013561f605d7b6::t_eeb44ec4d5fc50 1-135
+checkpoints/03-websockets/components/QuestionCard.tsx
+  s_013561f605d7b6::t_8e6189b66000fc 1-22
+checkpoints/03-websockets/components/QuestionForm.tsx
+  s_013561f605d7b6::t_458b7b2513d5cd 1-40
+checkpoints/03-websockets/components/QuestionList.tsx
+  s_013561f605d7b6::t_2e0961ee7e29a7 1-21
+checkpoints/03-websockets/components/RealtimeQuestionQueue.tsx
+  s_013561f605d7b6::t_c6aae5fa8fe968 1-115
+checkpoints/03-websockets/db/schema.ts
+  s_013561f605d7b6::t_37cb5ee392b8fe 1-11
+checkpoints/03-websockets/lib/questions.ts
+  s_013561f605d7b6::t_521e7ff131781f 1-8
+checkpoints/03-websockets/package.json
+  s_013561f605d7b6::t_3342f905609cb4 1-26
+checkpoints/03-websockets/pages/index.server.ts
+  s_013561f605d7b6::t_65f6e7d257838e 1-29
+checkpoints/03-websockets/pages/index.tsx
+  s_013561f605d7b6::t_20ff7d2d17974a 1-19
+checkpoints/03-websockets/pages/layout.tsx
+  s_013561f605d7b6::t_ba0e94fedd9ee2 1-20
+checkpoints/03-websockets/routes/questions.ws.ts
+  s_013561f605d7b6::t_69ef070f0c3ebb 1-61
+checkpoints/03-websockets/styles/app.css
+  s_013561f605d7b6::t_253140d7e1639c 1-325
+checkpoints/03-websockets/tsconfig.json
+  s_013561f605d7b6::t_6dcc566c01308f 1-24
+checkpoints/03-websockets/vite.config.ts
+  s_013561f605d7b6::t_41e3b301e0c8e7 1-8
+checkpoints/03-websockets/void.config.ts
+  s_013561f605d7b6::t_6d03d223a7288c 1-10
+checkpoints/04-ai/.gitignore
+  s_013561f605d7b6::t_beb38741e2b037 1-7
+checkpoints/04-ai/README.md
+  s_013561f605d7b6::t_3129254db874e4 1-13
+checkpoints/04-ai/components/AiSentimentPanel.tsx
+  s_013561f605d7b6::t_866b465dbcc32c 1-88
+checkpoints/04-ai/components/AuthPanel.tsx
+  s_013561f605d7b6::t_bc993911d3d83e 1-135
+checkpoints/04-ai/components/QuestionCard.tsx
+  s_013561f605d7b6::t_c31875430f8622 1-22
+checkpoints/04-ai/components/QuestionForm.tsx
+  s_013561f605d7b6::t_0446bb0f243809 1-40
+checkpoints/04-ai/components/QuestionList.tsx
+  s_013561f605d7b6::t_c7d1a88144588e 1-21
+checkpoints/04-ai/components/RealtimeQuestionQueue.tsx
+  s_013561f605d7b6::t_78f1162e002b83 1-115
+checkpoints/04-ai/db/schema.ts
+  s_013561f605d7b6::t_3510cb3ed5ef9c 1-11
+checkpoints/04-ai/lib/questions.ts
+  s_013561f605d7b6::t_30f57c70d86432 1-8
+checkpoints/04-ai/package.json
+  s_013561f605d7b6::t_a96d70edd30196 1-26
+checkpoints/04-ai/pages/index.server.ts
+  s_013561f605d7b6::t_373a002d96b148 1-29
+checkpoints/04-ai/pages/index.tsx
+  s_013561f605d7b6::t_d42dc0c325e6b3 1-23
+checkpoints/04-ai/pages/layout.tsx
+  s_013561f605d7b6::t_d8aaed901c942d 1-20
+checkpoints/04-ai/routes/api/sentiment.ts
+  s_013561f605d7b6::t_25dde934b5ae31 1-85
+checkpoints/04-ai/routes/questions.ws.ts
+  s_013561f605d7b6::t_18b2510d464e61 1-61
+checkpoints/04-ai/styles/app.css
+  s_013561f605d7b6::t_1e887cf4504a8f 1-325
+checkpoints/04-ai/tsconfig.json
+  s_013561f605d7b6::t_7f6a0e2b2f1419 1-24
+checkpoints/04-ai/vite.config.ts
+  s_013561f605d7b6::t_3f7f01348fcfca 1-8
+checkpoints/04-ai/void.config.ts
+  s_013561f605d7b6::t_dee721c30fe028 1-11
+checkpoints/05-auth/.gitignore
+  s_013561f605d7b6::t_51b1161172c597 1-7
+checkpoints/05-auth/README.md
+  s_013561f605d7b6::t_0b7a3eb45428bf 1-11
+checkpoints/05-auth/components/AiSentimentPanel.tsx
+  s_013561f605d7b6::t_b333be24294d1f 1-88
+checkpoints/05-auth/components/AuthPanel.tsx
+  s_013561f605d7b6::t_1bb065617ec460 1-136
+checkpoints/05-auth/components/QuestionCard.tsx
+  s_013561f605d7b6::t_b5874fe0945279 1-22
+checkpoints/05-auth/components/QuestionForm.tsx
+  s_013561f605d7b6::t_a800ad7d6b6598 1-40
+checkpoints/05-auth/components/QuestionList.tsx
+  s_013561f605d7b6::t_b2c5ad685e004b 1-21
+checkpoints/05-auth/components/RealtimeQuestionQueue.tsx
+  s_013561f605d7b6::t_d1c79369e4f727 1-133
+checkpoints/05-auth/db/schema.ts
+  s_013561f605d7b6::t_8ea7df164b5941 1-13
+checkpoints/05-auth/lib/questions.ts
+  s_013561f605d7b6::t_2f5f92a92a7944 1-8
+checkpoints/05-auth/package.json
+  s_013561f605d7b6::t_ea2adaded9123f 1-26
+checkpoints/05-auth/pages/index.server.ts
+  s_013561f605d7b6::t_7e90400e9e9fe3 1-46
+checkpoints/05-auth/pages/index.tsx
+  s_013561f605d7b6::t_91301be37d57d1 1-23
+checkpoints/05-auth/pages/layout.tsx
+  s_013561f605d7b6::t_ee254eba76d383 1-20
+checkpoints/05-auth/routes/api/sentiment.ts
+  s_013561f605d7b6::t_c329e04eac7219 1-85
+checkpoints/05-auth/routes/questions.ws.ts
+  s_013561f605d7b6::t_a13842a4d8b7c8 1-73
+checkpoints/05-auth/styles/app.css
+  s_013561f605d7b6::t_dc0a06da983de4 1-325
+checkpoints/05-auth/tsconfig.json
+  s_013561f605d7b6::t_4f0ddf2f8550ee 1-24
+checkpoints/05-auth/vite.config.ts
+  s_013561f605d7b6::t_afaee0c480aaec 1-8
+checkpoints/05-auth/void.config.ts
+  s_013561f605d7b6::t_2c43fda924f2ba 1-14
+checkpoints/06-email/.gitignore
+  s_013561f605d7b6::t_3321c3c8f52f25 1-7
+checkpoints/06-email/README.md
+  s_013561f605d7b6::t_a123bec623d4ba 1-19
+checkpoints/06-email/components/AiSentimentPanel.tsx
+  s_013561f605d7b6::t_d31bebbbf883fb 1-88
+checkpoints/06-email/components/AuthPanel.tsx
+  s_013561f605d7b6::t_3ddc809320d421 1-136
+checkpoints/06-email/components/QuestionCard.tsx
+  s_013561f605d7b6::t_9f5e4b61333c71 1-22
+checkpoints/06-email/components/QuestionForm.tsx
+  s_013561f605d7b6::t_513bf1ef639c9f 1-40
+checkpoints/06-email/components/QuestionList.tsx
+  s_013561f605d7b6::t_1682febba4e8d0 1-21
+checkpoints/06-email/components/RealtimeQuestionQueue.tsx
+  s_013561f605d7b6::t_7d02cf2160c4e9 1-133
+checkpoints/06-email/db/schema.ts
+  s_013561f605d7b6::t_2e51d81bc3e957 1-13
+checkpoints/06-email/env.ts
+  s_013561f605d7b6::t_509532c0a83d4f 1-5
+checkpoints/06-email/lib/notify.ts
+  s_013561f605d7b6::t_f8e41fd02186d3 1-45
+checkpoints/06-email/lib/questions.ts
+  s_013561f605d7b6::t_f4390bc648c13f 1-8
+checkpoints/06-email/package.json
+  s_013561f605d7b6::t_1570c8bca6cd7a 1-26
+checkpoints/06-email/pages/index.server.ts
+  s_013561f605d7b6::t_a07c9c00912314 1-53
+checkpoints/06-email/pages/index.tsx
+  s_013561f605d7b6::t_38a11f12f5d7b0 1-23
+checkpoints/06-email/pages/layout.tsx
+  s_013561f605d7b6::t_cc7ff049d9d8ed 1-20
+checkpoints/06-email/routes/api/sentiment.ts
+  s_013561f605d7b6::t_0628efbb8fd3b1 1-85
+checkpoints/06-email/routes/questions.ws.ts
+  s_013561f605d7b6::t_74b51cd267f0ab 1-80
+checkpoints/06-email/styles/app.css
+  s_013561f605d7b6::t_acb5c500c1787e 1-325
+checkpoints/06-email/tsconfig.json
+  s_013561f605d7b6::t_9c45d836b50127 1-24
+checkpoints/06-email/vite.config.ts
+  s_013561f605d7b6::t_d6145f45b3b4a4 1-8
+checkpoints/06-email/void.config.ts
+  s_013561f605d7b6::t_9a363c95b981c8 1-15
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "4cf7936568e8799baf7fc9da56ddd85c117616f1",
+  "prompts": {},
+  "sessions": {
+    "s_013561f605d7b6": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a1335e-f53a-7e32-935d-78bba6eab2a3",
+        "model": "gpt-5.5"
+      },
+      "human_author": "mdong <mdong@cloudflare.com>"
+    }
+  }
+}

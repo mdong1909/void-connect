@@ -16,12 +16,8 @@ export default function Page({ questions }: Props) {
       <section className="panel">
         <div className="sectionHeader">
           <h2>Ask a Question</h2>
-          <span>Database-backed</span>
         </div>
         <QuestionForm />
-        <p className="hint">
-          This version saves new questions to the database.
-        </p>
       </section>
 
       <section className="panel">

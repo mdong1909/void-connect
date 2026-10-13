@@ -9,7 +9,6 @@ export function QuestionCard({ question }: QuestionCardProps) {
 
   return (
     <li className="questionCard">
-      <div className="votePill">{question.votes ?? "Q"}</div>
       <div>
         <p className="questionText">{question.text}</p>
         <p className="questionMeta">

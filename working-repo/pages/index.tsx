@@ -4,8 +4,20 @@ import { QuestionList } from "../components/QuestionList";
 import { sampleQuestions } from "../lib/questions";
 import type { Question } from "../lib/questions";
 
+const adjectives = ["Bright", "Curious", "Helpful", "Kind", "Sharp", "Sunny"];
+const nouns = ["Builder", "Coder", "Guest", "Maker", "Reader", "Visitor"];
+
+function createUsername() {
+  const adjective = adjectives[Math.floor(Math.random() * adjectives.length)];
+  const noun = nouns[Math.floor(Math.random() * nouns.length)];
+  const number = Math.floor(100 + Math.random() * 900);
+
+  return `${adjective}${noun}${number}`;
+}
+
 export default function Page() {
   const [questions, setQuestions] = useState<Question[]>(sampleQuestions);
+  const [username] = useState(createUsername);
 
   function addQuestion(text: string) {
     const id =
@@ -17,7 +29,7 @@ export default function Page() {
       {
         id,
         text,
-        author: "You",
+        author: username,
         votes: 0,
         createdAt: "Just now",
       },
@@ -39,13 +51,8 @@ export default function Page() {
       <section className="panel">
         <div className="sectionHeader">
           <h2>Ask a Question</h2>
-          <span>Static starter</span>
         </div>
         <QuestionForm onSubmit={addQuestion} />
-        <p className="hint">
-          This version updates the screen, but refresh the page and new
-          questions disappear.
-        </p>
       </section>
 
       <section className="panel">

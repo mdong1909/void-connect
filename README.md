@@ -2,11 +2,13 @@
 
 This bundle contains the app checkpoints used by the workshop.
 
-Each checkpoint is a complete app folder. If you get stuck during the live session, move into the matching checkpoint and continue from there.
+`working-repo` is the app folder attendees edit during the live session.
+
+Each checkpoint is a complete fallback app folder. If you get stuck during the live session, move into the matching checkpoint and continue from there.
 
 ```txt
+working-repo/
 checkpoints/
-  01-static-starter/
   02-database/
   03-websockets/
   04-ai/
@@ -17,14 +19,17 @@ checkpoints/
 Start with:
 
 ```bash
-cd checkpoints/01-static-starter
+cd working-repo
+node --version
+npm --version
+npx --version
 npm install
 npm run dev
 ```
 
 Checkpoint status:
 
-- `01-static-starter`: static app shell
+- `working-repo`: static app shell used throughout the workshop
 - `02-database`: database-backed questions
 - `03-websockets`: anonymous realtime question updates across tabs
 - `04-ai`: AI sentiment classification on top of anonymous realtime questions

@@ -56,12 +56,12 @@ export function AuthPanel({ user }: AuthPanelProps) {
           email,
           password,
         });
-      } else {
-        await auth.signIn.email({
-          email,
-          password,
-        });
       }
+
+      await auth.signIn.email({
+        email,
+        password,
+      });
 
       window.location.href = "/";
     } catch (reason) {

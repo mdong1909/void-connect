@@ -1,0 +1,65 @@
+checkpoints/02-database/components/QuestionCard.tsx
+  s_013561f605d7b6::t_48115172aa6b25 5-8,11-24,28,31-32,35-42
+checkpoints/02-database/components/QuestionList.tsx
+  s_013561f605d7b6::t_73faebdce65730 6-12,15,23-27
+checkpoints/02-database/styles/app.css
+  s_013561f605d7b6::t_23f012b212b51f 103-124,306-309,316-319,326-372,396-400,404-411
+checkpoints/03-websockets/components/QuestionCard.tsx
+  s_013561f605d7b6::t_daff5b57675204 5-8,11-24,28,31-32,35-42
+checkpoints/03-websockets/components/QuestionList.tsx
+  s_013561f605d7b6::t_5fe3b299ce9044 6-12,15,23-27
+checkpoints/03-websockets/styles/app.css
+  s_013561f605d7b6::t_1b8298b2aac524 103-124,306-309,316-319,326-372,396-400,404-411
+checkpoints/04-ai/components/QuestionCard.tsx
+  s_013561f605d7b6::t_46d54a07bf2f8b 5-8,11-24,28,31-32,35-42
+checkpoints/04-ai/components/QuestionList.tsx
+  s_013561f605d7b6::t_cc6665ad03d3f7 6-12,15,23-27
+checkpoints/04-ai/components/RealtimeQuestionQueue.tsx
+  s_013561f605d7b6::t_7ec020c85491d1 43-53,66-70,128-158,183-193,195-196
+checkpoints/04-ai/routes/api/sentiment.ts
+  s_013561f605d7b6::t_a37a5d47c6277c 17,36-49,56,59,63-73,78-81,83,87-97
+checkpoints/04-ai/styles/app.css
+  s_013561f605d7b6::t_6083327c7a3772 103-124,306-309,316-319,326-372,396-400,404-411
+checkpoints/05-auth/components/QuestionCard.tsx
+  s_013561f605d7b6::t_337521d2412ce9 5-8,11-24,28,31-32,35-42
+checkpoints/05-auth/components/QuestionList.tsx
+  s_013561f605d7b6::t_8ac0f5e55bd136 6-12,15,23-27
+checkpoints/05-auth/components/RealtimeQuestionQueue.tsx
+  s_013561f605d7b6::t_857bb87070501e 37-47,61-65,123-153,174-184,186-187
+checkpoints/05-auth/routes/api/sentiment.ts
+  s_013561f605d7b6::t_aa201095e4cdff 17,36-49,56,59,63-73,78-81,83,87-97
+checkpoints/05-auth/styles/app.css
+  s_013561f605d7b6::t_a127a5bbe41514 103-124,306-309,316-319,326-372,396-400,404-411
+checkpoints/06-email/components/QuestionCard.tsx
+  s_013561f605d7b6::t_be07b45a3ae873 5-8,11-24,28,31-32,35-42
+checkpoints/06-email/components/QuestionList.tsx
+  s_013561f605d7b6::t_4a75e99c65221d 6-12,15,23-27
+checkpoints/06-email/components/RealtimeQuestionQueue.tsx
+  s_013561f605d7b6::t_7d110927c776ec 37-47,61-65,123-153,174-184,186-187
+checkpoints/06-email/routes/api/sentiment.ts
+  s_013561f605d7b6::t_c8f596ef3ffda3 17,36-49,56,59,63-73,78-81,83,87-97
+checkpoints/06-email/styles/app.css
+  s_013561f605d7b6::t_476aba014470ad 103-124,306-309,316-319,326-372,396-400,404-411
+working-repo/components/QuestionCard.tsx
+  s_013561f605d7b6::t_12d957b73ea5a2 5-8,11-23,28,35-42
+working-repo/components/QuestionList.tsx
+  s_013561f605d7b6::t_df62df3f89bfd6 6-12,15,23-27
+working-repo/styles/app.css
+  s_013561f605d7b6::t_39b4575c2b91d8 103-124,306-309,316-319,326-372,396-400,404-411
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "8485e00c05c7c1ec6fd0ecf8a613167f4d8248aa",
+  "prompts": {},
+  "sessions": {
+    "s_013561f605d7b6": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a1335e-f53a-7e32-935d-78bba6eab2a3",
+        "model": "gpt-5.5"
+      },
+      "human_author": "mdong <mdong@cloudflare.com>"
+    }
+  }
+}

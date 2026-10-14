@@ -1,0 +1,29 @@
+checkpoints/02-database/components/AuthPanel.tsx
+  s_013561f605d7b6::t_9f1fb4d720cea1 61-65
+checkpoints/03-websockets/components/AuthPanel.tsx
+  s_013561f605d7b6::t_8df6e7eabf0075 61-65
+checkpoints/04-ai/components/AuthPanel.tsx
+  s_013561f605d7b6::t_7500c7bab968bc 61-65
+checkpoints/05-auth/components/AuthPanel.tsx
+  s_013561f605d7b6::t_386f6111f3ff33 61-65
+checkpoints/06-email/components/AuthPanel.tsx
+  s_013561f605d7b6::t_0b271526f0a09f 61-65
+working-repo/components/AuthPanel.tsx
+  s_013561f605d7b6::t_b4cceefeebc088 61-65
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "75eb7dcf73df5207718ad1b9b2aba71df46dacfe",
+  "prompts": {},
+  "sessions": {
+    "s_013561f605d7b6": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a1335e-f53a-7e32-935d-78bba6eab2a3",
+        "model": "gpt-5.5"
+      },
+      "human_author": "mdong <mdong@cloudflare.com>"
+    }
+  }
+}

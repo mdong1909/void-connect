@@ -9,7 +9,10 @@ export default function Page({ user, questions }: Props) {
       <section className="intro">
         <p className="eyebrow">Live Workshop</p>
         <h1>Live Q&A Queue</h1>
-        <p>Sign in, submit a question, and watch it appear in every open tab.</p>
+        <p>
+          Submit questions during the session and keep the most useful topics
+          easy to see.
+        </p>
       </section>
 
       <AuthPanel user={user} />

@@ -6,7 +6,6 @@ import type { Question } from "../lib/questions";
 
 const adjectives = ["Bright", "Curious", "Helpful", "Kind", "Sharp", "Sunny"];
 const nouns = ["Builder", "Coder", "Guest", "Maker", "Reader", "Visitor"];
-const usernameStorageKey = "live-qa-username";
 
 function createUsername() {
   const adjective = adjectives[Math.floor(Math.random() * adjectives.length)];
@@ -16,23 +15,12 @@ function createUsername() {
   return `${adjective}${noun}${number}`;
 }
 
-function getStoredUsername() {
-  const saved = sessionStorage.getItem(usernameStorageKey);
-
-  if (saved) return saved;
-
-  const username = createUsername();
-  sessionStorage.setItem(usernameStorageKey, username);
-
-  return username;
-}
-
 export default function Page() {
   const [questions, setQuestions] = useState<Question[]>(sampleQuestions);
   const [username, setUsername] = useState("");
 
   useEffect(() => {
-    setUsername(getStoredUsername());
+    setUsername(createUsername());
   }, []);
 
   function addQuestion(text: string) {

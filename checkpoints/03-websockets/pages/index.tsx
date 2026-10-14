@@ -8,7 +8,8 @@ export default function Page({ questions }: Props) {
         <p className="eyebrow">Live Workshop</p>
         <h1>Live Q&A Queue</h1>
         <p>
-          Submit an anonymous question and watch it appear in every open tab.
+          Submit questions during the session and keep the most useful topics
+          easy to see.
         </p>
       </section>
 

@@ -6,7 +6,6 @@ import { QuestionList } from "./QuestionList";
 
 const adjectives = ["Bright", "Curious", "Helpful", "Kind", "Sharp", "Sunny"];
 const nouns = ["Builder", "Coder", "Guest", "Maker", "Reader", "Visitor"];
-const usernameStorageKey = "live-qa-username";
 
 function createUsername() {
   const adjective = adjectives[Math.floor(Math.random() * adjectives.length)];
@@ -14,17 +13,6 @@ function createUsername() {
   const number = Math.floor(100 + Math.random() * 900);
 
   return `${adjective}${noun}${number}`;
-}
-
-function getStoredUsername() {
-  const saved = sessionStorage.getItem(usernameStorageKey);
-
-  if (saved) return saved;
-
-  const username = createUsername();
-  sessionStorage.setItem(usernameStorageKey, username);
-
-  return username;
 }
 
 type ClientMessage = {
@@ -71,7 +59,7 @@ export function RealtimeQuestionQueue({
   }, [initialQuestions]);
 
   useEffect(() => {
-    setUsername(getStoredUsername());
+    setUsername(createUsername());
   }, []);
 
   useEffect(() => {
@@ -137,8 +125,8 @@ export function RealtimeQuestionQueue({
         </p>
         <p className="hint">
           {status === "connected"
-            ? "Open this app in another tab. New questions will appear there instantly with their generated usernames."
-            : "The app can still save questions with generated usernames while the realtime connection is starting."}
+            ? "Open this app in another tab. New questions will appear there instantly with their page-load usernames."
+            : "The app can still save questions with page-load usernames while the realtime connection is starting."}
         </p>
       </section>
 

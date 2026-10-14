@@ -106,6 +106,24 @@ h2 {
   gap: 10px;
 }
 
+.emailSummaryAction {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.emailSummaryStatus {
+  max-width: 220px;
+  margin: 0;
+  color: #18794e;
+  font-size: 0.82rem;
+  line-height: 1.35;
+}
+
+.emailSummaryStatus.error {
+  color: #b42318;
+}
+
 .secondaryAction {
   min-height: 36px;
   padding: 0 12px;
@@ -395,7 +413,15 @@ h2 {
 
   .sectionActions {
     width: 100%;
+    align-items: flex-start;
+    flex-wrap: wrap;
     justify-content: space-between;
+  }
+
+  .emailSummaryAction {
+    width: 100%;
+    align-items: flex-start;
+    flex-direction: column;
   }
 
   .authForm {

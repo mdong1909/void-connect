@@ -19,6 +19,6 @@
     "noEmit": true,
     "jsx": "react-jsx"
   },
-  "include": ["pages", "components", "lib", "db", "routes", "styles", "env.ts", "vite.config.ts", "void.config.ts"]
+  "include": ["pages", "components", "lib", "db", "routes", "styles", "vite.config.ts", "void.config.ts"]
 }
 

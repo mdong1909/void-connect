@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { connect } from "void/ws";
 import type { Question } from "../lib/questions";
+import { EmailSummaryButton } from "./EmailSummaryButton";
 import { QuestionForm } from "./QuestionForm";
 import { QuestionList } from "./QuestionList";
 
@@ -175,6 +176,10 @@ export function RealtimeQuestionQueue({
             >
               {classifyPending ? "Classifying..." : "Classify"}
             </button>
+            <EmailSummaryButton
+              questionCount={questions.length}
+              recipientEmail={user.email}
+            />
           </div>
         </div>
         {classifyError ? <p className="errorText queueError">{classifyError}</p> : null}

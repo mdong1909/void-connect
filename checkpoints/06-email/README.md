@@ -1,12 +1,6 @@
-# Checkpoint 06: Optional Email Notifications
+# Checkpoint 06: Optional Email Summary
 
-This optional checkpoint keeps auth, WebSockets, and AI sentiment classification, then adds email notifications.
-
-Create a local `.env` file before starting the dev server:
-
-```txt
-NOTIFICATION_EMAIL=you@example.com
-```
+This optional checkpoint keeps auth, WebSockets, and AI sentiment classification, then adds a button that emails the signed-in site visitor a question-count summary.
 
 ```bash
 npm install
@@ -15,5 +9,5 @@ npx void db push
 npm run dev
 ```
 
-During local development, Void captures sent email in the local inbox instead of sending real messages.
+During local development, Void captures sent email in the local inbox instead of sending real messages. Click **Email Summary** to send the current question count to the signed-in email address.
 

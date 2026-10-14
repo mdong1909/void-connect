@@ -3,7 +3,6 @@ import type { InferProps } from "void";
 import { getUser, requireAuth } from "void/auth";
 import { db, desc } from "void/db";
 import { questions } from "@schema";
-import { notifyQuestion } from "../lib/notify";
 
 export type Props = InferProps<typeof loader>;
 
@@ -44,12 +43,6 @@ export const action = defineHandler(async (c) => {
     text,
     userId: user.id,
     authorName,
-  });
-
-  await notifyQuestion({
-    authorName,
-    authorEmail: user.email,
-    text,
   });
 });
 

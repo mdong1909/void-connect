@@ -2,7 +2,6 @@ import * as v from "valibot";
 import { defineRoom } from "void/ws";
 import { db, desc } from "void/db";
 import { questions } from "@schema";
-import { notifyQuestion } from "../lib/notify";
 
 const ClientMessage = v.variant("type", [
   v.object({
@@ -69,12 +68,6 @@ export default defineRoom({
     await ctx.room.broadcast({
       type: "question.created",
       question,
-    });
-
-    await notifyQuestion({
-      authorName,
-      authorEmail: ctx.user!.email,
-      text,
     });
   },
 });

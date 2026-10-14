@@ -34,7 +34,7 @@ Checkpoint status:
 - `03-websockets`: anonymous realtime question updates across tabs
 - `04-ai`: AI sentiment classification on top of anonymous realtime questions
 - `05-auth`: email/password auth, question authors, realtime, and AI sentiment
-- `06-email`: optional email notification when a question is posted
+- `06-email`: optional button that emails the signed-in site visitor a question-count summary
 
 ## Install Troubleshooting
 

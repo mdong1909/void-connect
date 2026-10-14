@@ -1,6 +1,8 @@
 node_modules
 dist
 .void
+.void-wrangler.jsonc
+void.lock.json
 .env
 .env.*
 *.local

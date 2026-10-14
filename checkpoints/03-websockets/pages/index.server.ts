@@ -17,13 +17,18 @@ export const loader = defineHandler(async () => {
 export const action = defineHandler(async (c) => {
   const body = await c.req.parseBody();
   const value = body.text;
+  const authorValue = body.authorName;
 
   if (typeof value !== "string") return;
 
   const text = value.trim();
+  const authorName =
+    typeof authorValue === "string" && authorValue.trim()
+      ? authorValue.trim()
+      : "Anonymous Visitor";
 
   if (!text) return;
 
-  await db.insert(questions).values({ text });
+  await db.insert(questions).values({ text, authorName });
 });
 

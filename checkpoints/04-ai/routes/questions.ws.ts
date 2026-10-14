@@ -7,12 +7,14 @@ const ClientMessage = v.variant("type", [
   v.object({
     type: v.literal("question.create"),
     text: v.string(),
+    authorName: v.optional(v.string()),
   }),
 ]);
 
 const QuestionMessage = v.object({
   id: v.number(),
   text: v.string(),
+  authorName: v.optional(v.nullable(v.string())),
   createdAt: v.string(),
 });
 
@@ -45,12 +47,13 @@ export default defineRoom({
   },
   async onMessage(ctx, event) {
     const text = event.text.trim();
+    const authorName = event.authorName?.trim() || "Anonymous Visitor";
 
     if (!text) return;
 
     const [question] = await db
       .insert(questions)
-      .values({ text })
+      .values({ text, authorName })
       .returning();
 
     await ctx.room.broadcast({

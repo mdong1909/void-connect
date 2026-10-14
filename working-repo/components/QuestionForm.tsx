@@ -2,10 +2,15 @@ import { useState } from "react";
 
 type QuestionFormProps = {
   onSubmit?: (text: string) => void;
+  authorName?: string;
   disabled?: boolean;
 };
 
-export function QuestionForm({ onSubmit, disabled = false }: QuestionFormProps) {
+export function QuestionForm({
+  onSubmit,
+  authorName,
+  disabled = false,
+}: QuestionFormProps) {
   const [text, setText] = useState("");
   const isClientOnly = Boolean(onSubmit);
 
@@ -22,6 +27,9 @@ export function QuestionForm({ onSubmit, disabled = false }: QuestionFormProps) 
         setText("");
       }}
     >
+      {authorName ? (
+        <input type="hidden" name="authorName" value={authorName} />
+      ) : null}
       <input
         name="text"
         value={text}

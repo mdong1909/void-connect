@@ -5,7 +5,7 @@ export const questions = sqliteTable("questions", {
   id: integer("id").primaryKey({ autoIncrement: true }),
   text: text("text").notNull(),
   userId: text("user_id"),
-  authorName: text("author_name").notNull().default("Site visitor"),
+  authorName: text("author_name").notNull().default("Anonymous Visitor"),
   createdAt: text("created_at")
     .notNull()
     .default(sql`(datetime('now'))`),

@@ -14,9 +14,7 @@ type ClefChoiceAnswer = {
 };
 
 type ClefResult = {
-  answers?: {
-    sentiment?: string | ClefChoiceAnswer;
-  };
+  answers?: Record<string, string | ClefChoiceAnswer | undefined>;
 };
 
 type SentimentAnswer = string | ClefChoiceAnswer | undefined;
@@ -35,51 +33,67 @@ function readProbabilities(answer: SentimentAnswer) {
   return answer.probabilities || answer.scores || {};
 }
 
+const sentimentCriteria = {
+  positive: "Curious, excited, appreciative, or optimistic.",
+  neutral: "Informational, factual, or mixed without strong emotion.",
+  negative: "Frustrated, confused, skeptical, disappointed, or worried.",
+};
+
+function normalizeLabel(label: string | undefined) {
+  const value = label?.toLowerCase().trim();
+  if (value === "positive" || value === "neutral" || value === "negative") {
+    return value;
+  }
+  return "unknown";
+}
+
 export const POST = defineHandler(async () => {
   const currentQuestions = await db
     .select()
     .from(questions)
     .orderBy(desc(questions.createdAt));
 
-  const questionTexts = currentQuestions
-    .slice(0, 12)
-    .map((question, index) => `${index + 1}. ${question.text}`);
-
-  if (questionTexts.length === 0) {
+  if (currentQuestions.length === 0) {
     return {
-      label: "No questions yet",
-      confidence: null,
-      probabilities: {},
       questionCount: 0,
+      classifications: [],
     };
   }
+
+  const clefQuestions = Object.fromEntries(
+    currentQuestions.map((question, index) => [
+      `question_${index}`,
+      {
+        type: "choice",
+        instructions: `Classify the sentiment of this question: "${question.text}"`,
+        criteria: sentimentCriteria,
+      },
+    ]),
+  );
 
   const result = (await ai.run("@cf/cloudflare/clef" as string, {
     model: "clef",
     state: {
       event: "Live conference Q&A",
-      questions: questionTexts,
+      questions: currentQuestions.map((question, index) => ({
+        number: index + 1,
+        text: question.text,
+      })),
     },
-    questions: {
-      sentiment: {
-        type: "choice",
-        instructions:
-          "Classify the overall sentiment of this live Q&A queue.",
-        criteria: {
-          positive: "Curious, excited, appreciative, or optimistic.",
-          neutral: "Informational, factual, or mixed without strong emotion.",
-          negative: "Frustrated, confused, skeptical, disappointed, or worried.",
-        },
-      },
-    },
+    questions: clefQuestions,
   })) as ClefResult;
 
-  const answer = result.answers?.sentiment;
-
   return {
-    label: readLabel(answer) || "unknown",
-    confidence: readConfidence(answer),
-    probabilities: readProbabilities(answer),
-    questionCount: questionTexts.length,
+    questionCount: currentQuestions.length,
+    classifications: currentQuestions.map((question, index) => {
+      const answer = result.answers?.[`question_${index}`];
+
+      return {
+        id: String(question.id),
+        label: normalizeLabel(readLabel(answer)),
+        confidence: readConfidence(answer),
+        probabilities: readProbabilities(answer),
+      };
+    }),
   };
 });

@@ -1,4 +1,3 @@
-import { AiSentimentPanel } from "../components/AiSentimentPanel";
 import { RealtimeQuestionQueue } from "../components/RealtimeQuestionQueue";
 import type { Props } from "./index.server";
 
@@ -15,9 +14,6 @@ export default function Page({ questions }: Props) {
       </section>
 
       <RealtimeQuestionQueue initialQuestions={questions} />
-
-      <AiSentimentPanel />
     </main>
   );
 }
-

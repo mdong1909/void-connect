@@ -34,6 +34,17 @@ type QuestionSocket = {
   on(type: "error", handler: (error: unknown) => void): () => void;
 };
 
+type SentimentClassification = {
+  id: string;
+  label: string;
+  confidence: number | null;
+};
+
+type SentimentResponse = {
+  classifications: SentimentClassification[];
+  questionCount: number;
+};
+
 type RealtimeQuestionQueueProps = {
   user: User | null;
   initialQuestions: Question[];
@@ -47,6 +58,11 @@ export function RealtimeQuestionQueue({
   const [status, setStatus] = useState<"offline" | "connecting" | "connected">(
     "offline",
   );
+  const [sentiments, setSentiments] = useState<Record<string, SentimentClassification>>(
+    {},
+  );
+  const [classifyError, setClassifyError] = useState("");
+  const [classifyPending, setClassifyPending] = useState(false);
   const socketRef = useRef<QuestionSocket | null>(null);
 
   useEffect(() => {
@@ -104,6 +120,37 @@ export function RealtimeQuestionQueue({
       ? "Realtime connected"
       : "Saving fallback ready";
 
+  async function classifyQuestions() {
+    setClassifyPending(true);
+    setClassifyError("");
+
+    try {
+      const response = await fetch("/api/sentiment", { method: "POST" });
+
+      if (!response.ok) {
+        throw new Error("Sentiment classification failed.");
+      }
+
+      const data = (await response.json()) as SentimentResponse;
+      setSentiments(
+        Object.fromEntries(
+          data.classifications.map((classification) => [
+            classification.id,
+            classification,
+          ]),
+        ),
+      );
+    } catch (reason) {
+      setClassifyError(
+        reason instanceof Error
+          ? reason.message
+          : "Sentiment classification failed.",
+      );
+    } finally {
+      setClassifyPending(false);
+    }
+  }
+
   return (
     <>
       <section className="panel">
@@ -124,9 +171,20 @@ export function RealtimeQuestionQueue({
       <section className="panel">
         <div className="sectionHeader">
           <h2>Current Questions</h2>
-          <span>{questions.length} total</span>
+          <div className="sectionActions">
+            <span>{questions.length} total</span>
+            <button
+              className="secondaryAction"
+              type="button"
+              onClick={classifyQuestions}
+              disabled={classifyPending || questions.length === 0}
+            >
+              {classifyPending ? "Classifying..." : "Classify"}
+            </button>
+          </div>
         </div>
-        <QuestionList questions={questions} />
+        {classifyError ? <p className="errorText queueError">{classifyError}</p> : null}
+        <QuestionList questions={questions} sentiments={sentiments} />
       </section>
     </>
   );

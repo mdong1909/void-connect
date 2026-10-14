@@ -1,5 +1,4 @@
 import { AuthPanel } from "../components/AuthPanel";
-import { AiSentimentPanel } from "../components/AiSentimentPanel";
 import { RealtimeQuestionQueue } from "../components/RealtimeQuestionQueue";
 import type { Props } from "./index.server";
 
@@ -18,8 +17,6 @@ export default function Page({ user, questions }: Props) {
       <AuthPanel user={user} />
 
       <RealtimeQuestionQueue user={user} initialQuestions={questions} />
-
-      <AiSentimentPanel />
     </main>
   );
 }

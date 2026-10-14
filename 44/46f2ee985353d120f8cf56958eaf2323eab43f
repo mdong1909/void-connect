@@ -1,0 +1,53 @@
+checkpoints/02-database/components/AuthPanel.tsx
+  s_013561f605d7b6::t_cdc5da8f165d72 29,55
+checkpoints/02-database/styles/app.css
+  s_013561f605d7b6::t_0b69568d7f417f 212
+checkpoints/03-websockets/components/AuthPanel.tsx
+  s_013561f605d7b6::t_5ebad565f44348 29,55
+checkpoints/03-websockets/styles/app.css
+  s_013561f605d7b6::t_ff709d614c98b0 212
+checkpoints/04-ai/components/AuthPanel.tsx
+  s_013561f605d7b6::t_188582f0bd5406 29,55
+checkpoints/04-ai/styles/app.css
+  s_013561f605d7b6::t_2d3da415abae8b 212
+checkpoints/05-auth/components/AuthPanel.tsx
+  s_013561f605d7b6::t_6cd146dd2d235f 29,55
+checkpoints/05-auth/components/RealtimeQuestionQueue.tsx
+  s_013561f605d7b6::t_31d93529709aa8 67
+checkpoints/05-auth/pages/index.server.ts
+  s_013561f605d7b6::t_45f27adffdce27 19,40
+checkpoints/05-auth/routes/questions.ws.ts
+  s_013561f605d7b6::t_14c895debe71f7 58
+checkpoints/05-auth/styles/app.css
+  s_013561f605d7b6::t_a2dcdea36f0e43 212
+checkpoints/06-email/components/AuthPanel.tsx
+  s_013561f605d7b6::t_dae19cde1e24ac 29,55
+checkpoints/06-email/components/RealtimeQuestionQueue.tsx
+  s_013561f605d7b6::t_329a97ab41fa48 67
+checkpoints/06-email/pages/index.server.ts
+  s_013561f605d7b6::t_826fb7a5ee4ba1 20,41
+checkpoints/06-email/routes/questions.ws.ts
+  s_013561f605d7b6::t_3d684deeac4108 59
+checkpoints/06-email/styles/app.css
+  s_013561f605d7b6::t_88e68c454025a1 212
+working-repo/components/AuthPanel.tsx
+  s_013561f605d7b6::t_9e9404c436392c 29,55
+working-repo/styles/app.css
+  s_013561f605d7b6::t_d2898bcda25dd8 212
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "4446f2ee985353d120f8cf56958eaf2323eab43f",
+  "prompts": {},
+  "sessions": {
+    "s_013561f605d7b6": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a1335e-f53a-7e32-935d-78bba6eab2a3",
+        "model": "gpt-5.5"
+      },
+      "human_author": "mdong <mdong@cloudflare.com>"
+    }
+  }
+}

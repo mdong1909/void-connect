@@ -64,7 +64,7 @@ export function RealtimeQuestionQueue({
   const [classifyError, setClassifyError] = useState("");
   const [classifyPending, setClassifyPending] = useState(false);
   const socketRef = useRef<QuestionSocket | null>(null);
-  const displayName = user.name || user.email || "Site visitor";
+  const displayName = user.email || user.name || "Site visitor";
 
   useEffect(() => {
     setQuestions(initialQuestions);

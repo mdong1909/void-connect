@@ -16,7 +16,6 @@ async function getAuthClient() {
 
 export function AuthPanel({ user }: AuthPanelProps) {
   const [mode, setMode] = useState<"sign-in" | "sign-up">("sign-in");
-  const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
@@ -27,7 +26,7 @@ export function AuthPanel({ user }: AuthPanelProps) {
       <section className="panel authPanel">
         <div>
           <p className="eyebrow">Signed in</p>
-          <h2>{user.name || user.email}</h2>
+          <h2>{user.email || user.name}</h2>
         </div>
         <button
           type="button"
@@ -53,7 +52,7 @@ export function AuthPanel({ user }: AuthPanelProps) {
 
       if (mode === "sign-up") {
         await auth.signUp.email({
-          name: name.trim() || email,
+          name: email,
           email,
           password,
         });
@@ -100,14 +99,6 @@ export function AuthPanel({ user }: AuthPanelProps) {
       </div>
 
       <form className="authForm" onSubmit={submit}>
-        {mode === "sign-up" ? (
-          <input
-            value={name}
-            onChange={(event) => setName(event.target.value)}
-            placeholder="Display name"
-            aria-label="Display name"
-          />
-        ) : null}
         <input
           value={email}
           onChange={(event) => setEmail(event.target.value)}

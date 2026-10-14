@@ -55,7 +55,7 @@ export default defineRoom({
 
     if (!text) return;
 
-    const authorName = ctx.user!.name || ctx.user!.email || "Site visitor";
+    const authorName = ctx.user!.email || ctx.user!.name || "Site visitor";
     const [question] = await db
       .insert(questions)
       .values({

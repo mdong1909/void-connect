@@ -16,7 +16,7 @@ export const loader = defineHandler(async (c) => {
   return {
     user: {
       id: user.id,
-      name: user.name,
+      name: user.email || user.name,
       email: user.email,
     },
     questions: await db
@@ -37,7 +37,7 @@ export const action = defineHandler(async (c) => {
 
   if (!text) return;
 
-  const authorName = user.name || user.email || "Site visitor";
+  const authorName = user.email || user.name || "Site visitor";
 
   await db.insert(questions).values({
     text,

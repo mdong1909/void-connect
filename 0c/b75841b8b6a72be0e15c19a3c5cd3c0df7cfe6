@@ -1,0 +1,35 @@
+checkpoints/05-auth/components/AuthPanel.tsx
+  s_013561f605d7b6::t_1054160bbc6bfc 17-28,66,71-77
+checkpoints/05-auth/pages/login.server.ts
+  s_013561f605d7b6::t_31b4516a1a1c09 4-5
+checkpoints/05-auth/styles/app.css
+  s_013561f605d7b6::t_6edaea74f5824d 212
+checkpoints/06-email/components/AuthPanel.tsx
+  s_013561f605d7b6::t_7ed2fc41070b07 17-28,66,71-77
+checkpoints/06-email/pages/login.server.ts
+  s_013561f605d7b6::t_06069900e32a48 4-5
+checkpoints/06-email/styles/app.css
+  s_013561f605d7b6::t_d535cac06eb1ee 212
+working-repo/components/AuthPanel.tsx
+  s_013561f605d7b6::t_c3bf7dec22f450 17-28,48,66,71-77,80
+working-repo/components/QuestionForm.tsx
+  s_013561f605d7b6::t_545d019c7358f9 5,9-13,30-32
+working-repo/styles/app.css
+  s_013561f605d7b6::t_3416a8744d8054 212
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "0cb75841b8b6a72be0e15c19a3c5cd3c0df7cfe6",
+  "prompts": {},
+  "sessions": {
+    "s_013561f605d7b6": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a1335e-f53a-7e32-935d-78bba6eab2a3",
+        "model": "gpt-5.5"
+      },
+      "human_author": "mdong <mdong@cloudflare.com>"
+    }
+  }
+}

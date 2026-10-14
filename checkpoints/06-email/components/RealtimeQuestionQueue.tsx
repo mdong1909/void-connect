@@ -46,7 +46,7 @@ type SentimentResponse = {
 };
 
 type RealtimeQuestionQueueProps = {
-  user: User | null;
+  user: User;
   initialQuestions: Question[];
 };
 
@@ -64,19 +64,13 @@ export function RealtimeQuestionQueue({
   const [classifyError, setClassifyError] = useState("");
   const [classifyPending, setClassifyPending] = useState(false);
   const socketRef = useRef<QuestionSocket | null>(null);
+  const displayName = user.name || user.email || "Site visitor";
 
   useEffect(() => {
     setQuestions(initialQuestions);
   }, [initialQuestions]);
 
   useEffect(() => {
-    if (!user) {
-      socketRef.current?.close();
-      socketRef.current = null;
-      setStatus("offline");
-      return;
-    }
-
     setStatus("connecting");
 
     const socket = connect("/questions") as QuestionSocket;
@@ -114,9 +108,8 @@ export function RealtimeQuestionQueue({
         }
       : undefined;
 
-  const statusLabel = !user
-    ? "Sign in required"
-    : status === "connected"
+  const statusLabel =
+    status === "connected"
       ? "Realtime connected"
       : "Saving fallback ready";
 
@@ -158,13 +151,14 @@ export function RealtimeQuestionQueue({
           <h2>Ask a Question</h2>
           <span>{statusLabel}</span>
         </div>
-        <QuestionForm disabled={!user} onSubmit={submitThroughSocket} />
+        <QuestionForm onSubmit={submitThroughSocket} />
+        <p className="postingIdentity">
+          Posting as <strong>{displayName}</strong>
+        </p>
         <p className="hint">
-          {user
-            ? status === "connected"
-              ? "Open this app in another tab. New questions will appear there instantly."
-              : "The app can still save questions while the realtime connection is starting."
-            : "Sign in above before submitting a question."}
+          {status === "connected"
+            ? "Open this app in another tab. New questions will appear there instantly."
+            : "The app can still save questions through the protected form while the realtime connection is starting."}
         </p>
       </section>
 

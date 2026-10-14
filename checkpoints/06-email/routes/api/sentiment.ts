@@ -1,5 +1,6 @@
 import { defineHandler } from "void";
 import { ai } from "void/ai";
+import { requireAuth } from "void/auth";
 import { db, desc } from "void/db";
 import { questions } from "@schema";
 
@@ -47,7 +48,9 @@ function normalizeLabel(label: string | undefined) {
   return "unknown";
 }
 
-export const POST = defineHandler(async () => {
+export const POST = defineHandler(async (c) => {
+  await requireAuth(c);
+
   const currentQuestions = await db
     .select()
     .from(questions)

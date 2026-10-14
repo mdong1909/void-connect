@@ -7,17 +7,19 @@ import { notifyQuestion } from "../lib/notify";
 
 export type Props = InferProps<typeof loader>;
 
-export const loader = defineHandler(async () => {
+export const loader = defineHandler(async (c) => {
   const user = await getUser();
 
+  if (!user) {
+    return c.redirect("/login");
+  }
+
   return {
-    user: user
-      ? {
-          id: user.id,
-          name: user.name,
-          email: user.email,
-        }
-      : null,
+    user: {
+      id: user.id,
+      name: user.name,
+      email: user.email,
+    },
     questions: await db
       .select()
       .from(questions)

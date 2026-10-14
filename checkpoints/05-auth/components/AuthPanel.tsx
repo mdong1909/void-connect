@@ -34,7 +34,7 @@ export function AuthPanel({ user }: AuthPanelProps) {
           onClick={async () => {
             const auth = await getAuthClient();
             await auth.signOut();
-            window.location.reload();
+            window.location.href = "/login";
           }}
         >
           Sign out
@@ -64,7 +64,7 @@ export function AuthPanel({ user }: AuthPanelProps) {
         });
       }
 
-      window.location.reload();
+      window.location.href = "/";
     } catch (reason) {
       setError(reason instanceof Error ? reason.message : "Auth failed.");
     } finally {

@@ -1,0 +1,29 @@
+checkpoints/02-database/package.json
+  s_013561f605d7b6::t_5b7d77685039fa 13,23
+checkpoints/03-websockets/package.json
+  s_013561f605d7b6::t_9f6087254b670a 13,23
+checkpoints/04-ai/package.json
+  s_013561f605d7b6::t_96ad31a3c0f05f 13,23
+checkpoints/05-auth/package.json
+  s_013561f605d7b6::t_018246efc91eab 13,23
+checkpoints/06-email/package.json
+  s_013561f605d7b6::t_b8f39d02d36a22 13,23
+working-repo/package.json
+  s_013561f605d7b6::t_830ac378429e5f 11,21
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "ed1d324c6e6073558cb9ad3edbc59bdb5625f1c4",
+  "prompts": {},
+  "sessions": {
+    "s_013561f605d7b6": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a1335e-f53a-7e32-935d-78bba6eab2a3",
+        "model": "gpt-5.5"
+      },
+      "human_author": "mdong <mdong@cloudflare.com>"
+    }
+  }
+}

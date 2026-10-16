@@ -11,3 +11,4 @@ npm run dev
 
 During local development, Void captures sent email in the local inbox instead of sending real messages. Click **Email Summary** to send the current question count to the signed-in email address.
 
+To try the deployed app, use the anonymous workshop deployment flow and sign up with a real email address you control. Click **Email Summary** after signing in. The Void platform supplies the project's sender address and permits delivery to the signed-in address.

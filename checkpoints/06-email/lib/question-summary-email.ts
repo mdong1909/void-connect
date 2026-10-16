@@ -15,6 +15,7 @@ export async function sendQuestionSummaryEmail({
 }: SendQuestionSummaryEmailOptions) {
   const label = questionLabel(questionCount);
   const result = await sendEmail({
+    ...(import.meta.env.DEV ? { from: "Live Q&A <noreply@local.test>" } : {}),
     to: recipientEmail,
     subject: `Live Q&A summary: ${questionCount} ${label}`,
     text: [

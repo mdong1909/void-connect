@@ -53,31 +53,3 @@ This bundle uses the new Auth → Email → AI → Queues → Cron order. Extrac
 Follow the Run Locally section in your app folder’s README to apply its included migrations and start the development server.
 
 When changing a schema, stop the dev server, run `npx void db generate`, review the SQL, then run `npx void db migrate`. Keep those files with the app; do not switch back to `db push` or delete `_void_migrations`.
-
-## Scheduled summary email
-
-Lesson 08 is the final lesson and builds on the Queues app, keeping auth, email, realtime questions, and background AI classification. The job exports `"*/5 * * * *"` and runs automatically every five minutes after deployment, using the existing summary-email helper and the current question count.
-
-Each run reads registered users from the app's existing auth database and sends a separate email to each address. Users do not need to be signed in or to have submitted a question. No recipient configuration is needed. A failed delivery does not prevent the remaining users from receiving theirs.
-
-Cron schedules do not run automatically locally. Use the **Email Summary** button to test the email helper in the local inbox, then test the five-minute schedule after deployment. Emails continue with every app tab closed.
-
-The final Cron checkpoint includes every feature from the earlier lessons. Remove `crons/question-summary-email.ts` and redeploy to stop scheduled emails after the workshop.
-
-## Install Troubleshooting
-
-Each app folder includes a local `.npmrc` that sends `@cloudflare/*` packages to the public npm registry.
-
-If `npm install` still fails while downloading an `@cloudflare/*` package, check whether your machine is overriding the scoped registry:
-
-```bash
-npm config get @cloudflare:registry
-```
-
-For this workshop, it should resolve to:
-
-```txt
-https://registry.npmjs.org/
-```
-
-If it does not, ask the workshop helper before changing your global npm config.

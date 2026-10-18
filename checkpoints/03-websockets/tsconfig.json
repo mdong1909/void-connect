@@ -1,8 +1,13 @@
 {
+  "extends": "./.void/tsconfig.json",
   "compilerOptions": {
     "target": "ES2022",
     "useDefineForClassFields": true,
-    "lib": ["DOM", "DOM.Iterable", "ES2022"],
+    "lib": [
+      "DOM",
+      "DOM.Iterable",
+      "ES2022"
+    ],
     "allowJs": false,
     "skipLibCheck": true,
     "esModuleInterop": true,
@@ -11,14 +16,26 @@
     "forceConsistentCasingInFileNames": true,
     "module": "ESNext",
     "moduleResolution": "Bundler",
-    "paths": {
-      "@schema": ["./db/schema.ts"]
-    },
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx"
+    "jsx": "react-jsx",
+    "types": [
+      "void/env",
+      "vite/client"
+    ]
   },
-  "include": ["pages", "components", "lib", "db", "routes", "styles", "env.ts", "vite.config.ts", "void.config.ts"]
+  "include": [
+    "pages",
+    "components",
+    "lib",
+    "db",
+    "routes",
+    "queues",
+    "crons",
+    "styles",
+    "env.ts",
+    "vite.config.ts",
+    "void.config.ts"
+  ]
 }
-

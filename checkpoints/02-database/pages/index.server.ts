@@ -7,15 +7,12 @@ export type Props = InferProps<typeof loader>;
 
 export const loader = defineHandler(async () => {
   return {
-    questions: await db
-      .select()
-      .from(questions)
-      .orderBy(desc(questions.createdAt)),
+    questions: await db.select().from(questions).orderBy(desc(questions.createdAt)),
   };
 });
 
 export const action = defineHandler(async (c) => {
-  const body = await c.req.parseBody();
+  const body = await c.req.json<{ text?: unknown; authorName?: unknown }>();
   const value = body.text;
   const authorValue = body.authorName;
 
@@ -31,4 +28,3 @@ export const action = defineHandler(async (c) => {
 
   await db.insert(questions).values({ text, authorName });
 });
-

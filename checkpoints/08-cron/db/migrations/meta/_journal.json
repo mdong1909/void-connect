@@ -1,0 +1,41 @@
+{
+  "version": "7",
+  "dialect": "sqlite",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "6",
+      "when": 1792135793112,
+      "tag": "20261016072953_eminent_firestar",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "6",
+      "when": 1792146516844,
+      "tag": "20261016102836_brave_millenium_guard",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "6",
+      "when": 1792163588410,
+      "tag": "20261016151308_large_phalanx",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "6",
+      "when": 1792168654514,
+      "tag": "20261016163734_huge_spencer_smythe",
+      "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "6",
+      "when": 1792278439525,
+      "tag": "20261017230719_fantastic_bulldozer",
+      "breakpoints": true
+    }
+  ]
+}

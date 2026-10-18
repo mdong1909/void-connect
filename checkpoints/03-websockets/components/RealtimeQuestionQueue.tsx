@@ -44,13 +44,9 @@ type RealtimeQuestionQueueProps = {
   initialQuestions: Question[];
 };
 
-export function RealtimeQuestionQueue({
-  initialQuestions,
-}: RealtimeQuestionQueueProps) {
+export function RealtimeQuestionQueue({ initialQuestions }: RealtimeQuestionQueueProps) {
   const [questions, setQuestions] = useState(initialQuestions);
-  const [status, setStatus] = useState<"offline" | "connecting" | "connected">(
-    "offline",
-  );
+  const [status, setStatus] = useState<"offline" | "connecting" | "connected">("offline");
   const [username, setUsername] = useState("");
   const socketRef = useRef<QuestionSocket | null>(null);
 
@@ -104,10 +100,7 @@ export function RealtimeQuestionQueue({
         }
       : undefined;
 
-  const statusLabel =
-    status === "connected"
-      ? "Realtime connected"
-      : "Saving fallback ready";
+  const statusLabel = status === "connected" ? "Realtime connected" : "Saving fallback ready";
 
   return (
     <>
@@ -116,17 +109,9 @@ export function RealtimeQuestionQueue({
           <h2>Ask a Question</h2>
           <span>{statusLabel}</span>
         </div>
-        <QuestionForm
-          authorName={username || "Anonymous Visitor"}
-          onSubmit={submitThroughSocket}
-        />
+        <QuestionForm authorName={username || "Anonymous Visitor"} onSubmit={submitThroughSocket} />
         <p className="postingIdentity">
           Posting as <strong>{username || "Assigning name"}</strong>
-        </p>
-        <p className="hint">
-          {status === "connected"
-            ? "Open this app in another tab. New questions will appear there instantly with their page-load usernames."
-            : "The app can still save questions with page-load usernames while the realtime connection is starting."}
         </p>
       </section>
 

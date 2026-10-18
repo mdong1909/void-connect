@@ -35,10 +35,7 @@ export default defineRoom({
     server: ServerMessage,
   },
   async onConnect(ctx) {
-    const currentQuestions = await db
-      .select()
-      .from(questions)
-      .orderBy(desc(questions.createdAt));
+    const currentQuestions = await db.select().from(questions).orderBy(desc(questions.createdAt));
 
     await ctx.connection.send({
       type: "questions.snapshot",
@@ -51,10 +48,7 @@ export default defineRoom({
 
     if (!text) return;
 
-    const [question] = await db
-      .insert(questions)
-      .values({ text, authorName })
-      .returning();
+    const [question] = await db.insert(questions).values({ text, authorName }).returning();
 
     await ctx.room.broadcast({
       type: "question.created",

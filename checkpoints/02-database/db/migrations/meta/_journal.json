@@ -1,0 +1,13 @@
+{
+  "version": "7",
+  "dialect": "sqlite",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "6",
+      "when": 1792144178106,
+      "tag": "20261016094938_worried_doorman",
+      "breakpoints": true
+    }
+  ]
+}

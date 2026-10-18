@@ -26,17 +26,14 @@ export default function Page({ questions }: Props) {
       <section className="intro">
         <p className="eyebrow">Live Workshop</p>
         <h1>Live Q&A Queue</h1>
-        <p>
-          Submit questions during the session and keep the most useful topics
-          easy to see.
-        </p>
+        <p>Submit question during the session</p>
       </section>
 
       <section className="panel">
         <div className="sectionHeader">
           <h2>Ask a Question</h2>
         </div>
-        <QuestionForm authorName={username || "Anonymous Visitor"} />
+        <QuestionForm authorName={username} disabled={!username} />
         <p className="postingIdentity">
           Posting as <strong>{username || "Assigning name"}</strong>
         </p>
@@ -52,4 +49,3 @@ export default function Page({ questions }: Props) {
     </main>
   );
 }
-

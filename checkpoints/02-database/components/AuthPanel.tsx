@@ -14,6 +14,18 @@ async function getAuthClient() {
   return client.auth;
 }
 
+function assertAuthSucceeded(result: unknown) {
+  const error = (result as { error?: { message?: string } | string | null })?.error;
+
+  if (!error) return;
+
+  if (typeof error === "string") {
+    throw new Error(error);
+  }
+
+  throw new Error(error.message || "Auth failed.");
+}
+
 export function AuthPanel({ user }: AuthPanelProps) {
   const [mode, setMode] = useState<"sign-in" | "sign-up">("sign-in");
   const [email, setEmail] = useState("");
@@ -33,7 +45,7 @@ export function AuthPanel({ user }: AuthPanelProps) {
           onClick={async () => {
             const auth = await getAuthClient();
             await auth.signOut();
-            window.location.reload();
+            window.location.href = "/login";
           }}
         >
           Sign out
@@ -51,19 +63,21 @@ export function AuthPanel({ user }: AuthPanelProps) {
       const auth = await getAuthClient();
 
       if (mode === "sign-up") {
-        await auth.signUp.email({
+        const result = await auth.signUp.email({
           name: email,
           email,
           password,
         });
+        assertAuthSucceeded(result);
+      } else {
+        const result = await auth.signIn.email({
+          email,
+          password,
+        });
+        assertAuthSucceeded(result);
       }
 
-      await auth.signIn.email({
-        email,
-        password,
-      });
-
-      window.location.reload();
+      window.location.href = "/";
     } catch (reason) {
       setError(reason instanceof Error ? reason.message : "Auth failed.");
     } finally {

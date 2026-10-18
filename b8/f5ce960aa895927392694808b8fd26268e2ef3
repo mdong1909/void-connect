@@ -1,0 +1,407 @@
+README.md
+  s_3498ab18753c7d::t_5df055e7e1a2fd 14-18,34-65
+checkpoints/02-database/README.md
+  s_c66eb7a760c6f7::t_8a3c3f9e3aedac 5-9,13-57,61-75
+checkpoints/02-database/components/AuthPanel.tsx
+  s_a19cf79f0428a2::t_90b24348394e37 17-28,48,66,71-77,80
+checkpoints/02-database/components/QuestionForm.tsx
+  s_a19cf79f0428a2::t_363f4213ec80ee 1,5,10,12-13,16-63,65
+checkpoints/02-database/db/migrations/20261016094938_worried_doorman.sql
+  s_65bcac108e1886::t_9669da143e61be 1-6
+checkpoints/02-database/db/migrations/meta/20261016094938_snapshot.json
+  s_3498ab18753c7d::t_c5b232f6ef8b3f 1-58
+checkpoints/02-database/db/migrations/meta/_journal.json
+  s_3498ab18753c7d::t_6855d13fefe408 1-13
+checkpoints/02-database/lib/questions.ts
+  s_3498ab18753c7d::t_2ab5af69e7e2a8 2,4,6-7,11-33
+checkpoints/02-database/package.json
+  s_65bcac108e1886::t_b30a4d37bf999d 9-10
+checkpoints/02-database/pages/index.server.ts
+  s_3498ab18753c7d::t_2e767006ebad04 10,15
+checkpoints/02-database/pages/index.tsx
+  s_3498ab18753c7d::t_108210c3b69775 29,36
+checkpoints/02-database/styles/app.css
+  s_3498ab18753c7d::t_6c99d5fffeaffb 109-126,230,416-417,421-426
+checkpoints/02-database/tsconfig.json
+  s_c66eb7a760c6f7::t_8f27e9ea7c44d3 2,6-10,22-26,28-40
+checkpoints/03-websockets/README.md
+  s_c66eb7a760c6f7::t_dddf32e579c1e1 7-10,13-57,61-75
+checkpoints/03-websockets/components/AuthPanel.tsx
+  s_a19cf79f0428a2::t_12804322e0add7 17-28,48,66,71-77,80
+checkpoints/03-websockets/components/EmailSummaryButton.tsx
+  s_a19cf79f0428a2::t_c787f000e54433 1-76
+checkpoints/03-websockets/components/QuestionForm.tsx
+  s_a19cf79f0428a2::t_7590a1d2e5c834 1,5,10,12-13,16-63,65
+checkpoints/03-websockets/components/RealtimeQuestionQueue.tsx
+  s_3498ab18753c7d::t_35290477afbce8 47,49,103,112
+checkpoints/03-websockets/db/migrations/20261016094938_eager_maverick.sql
+  s_65bcac108e1886::t_e4a18f444e1b38 1-6
+checkpoints/03-websockets/db/migrations/meta/20261016094938_snapshot.json
+  s_3498ab18753c7d::t_727e2d01782272 1-58
+checkpoints/03-websockets/db/migrations/meta/_journal.json
+  s_3498ab18753c7d::t_edab5ba2a8d693 1-13
+checkpoints/03-websockets/lib/questions.ts
+  s_3498ab18753c7d::t_082a25e81511f0 2,4,6-7,11-33
+checkpoints/03-websockets/package.json
+  s_65bcac108e1886::t_82c2d7ab909c22 9-10
+checkpoints/03-websockets/pages/index.server.ts
+  s_3498ab18753c7d::t_5952e5785b2fe5 10,15
+checkpoints/03-websockets/pages/index.tsx
+  s_3498ab18753c7d::t_77a0357c2ba392 10
+checkpoints/03-websockets/routes/questions.ws.ts
+  s_3498ab18753c7d::t_2a9baa192b40ec 38,51
+checkpoints/03-websockets/styles/app.css
+  s_3498ab18753c7d::t_e39e28489c63f0 109-126,230,416-417,421-426
+checkpoints/03-websockets/tsconfig.json
+  s_c66eb7a760c6f7::t_842a014aa79610 2,6-10,22-26,28-40
+checkpoints/04-auth/README.md
+  s_c66eb7a760c6f7::t_52df359b8c1895 1,3-7,11-19,21-55,59-73
+checkpoints/04-auth/components/EmailSummaryButton.tsx
+  s_a19cf79f0428a2::t_e9ddc061f4bb06 1-76
+checkpoints/04-auth/components/QuestionForm.tsx
+  s_a19cf79f0428a2::t_e7d17489483c1e 1,5,10,12-13,16-63,65
+checkpoints/04-auth/components/RealtimeQuestionQueue.tsx
+  s_3498ab18753c7d::t_44313b77a21880 16,43,45,82,87-91,95,104,117
+checkpoints/04-auth/db/migrations/20261016094938_flowery_war_machine.sql
+  s_3498ab18753c7d::t_1fa750f65d5157 1-67
+checkpoints/04-auth/db/migrations/20261016145930_rare_purple_man.sql
+  s_3498ab18753c7d::t_0636c72901e544 1-3
+checkpoints/04-auth/db/migrations/meta/20261016094938_snapshot.json
+  s_3498ab18753c7d::t_f3ec4bdac9fcd0 1-448
+checkpoints/04-auth/db/migrations/meta/20261016145930_snapshot.json
+  s_3498ab18753c7d::t_2d09de08362838 1-403
+checkpoints/04-auth/db/migrations/meta/_journal.json
+  s_3498ab18753c7d::t_f5f16200bdf476 1-20
+checkpoints/04-auth/lib/questions.ts
+  s_3498ab18753c7d::t_d9b9e109bdee64 2,4,6-7,11-33
+checkpoints/04-auth/package.json
+  s_65bcac108e1886::t_a4285c6b001a54 2,9-10
+checkpoints/04-auth/pages/index.server.ts
+  s_3498ab18753c7d::t_b9818fbf8ef86f 3,22,27,29,34-37,41
+checkpoints/04-auth/pages/index.tsx
+  s_3498ab18753c7d::t_7cce0db2b64e31 11
+checkpoints/04-auth/pages/login.tsx
+  s_3498ab18753c7d::t_38dbf0d64dbdd2 9
+checkpoints/04-auth/routes/questions.ws.ts
+  s_3498ab18753c7d::t_dbacae5e65986d 38,51
+checkpoints/04-auth/tsconfig.json
+  s_c66eb7a760c6f7::t_a6bb5c90c5954f 2,6-10,22-26,28-40
+checkpoints/05-email/README.md
+  s_c66eb7a760c6f7::t_0c645b8f960f7d 1,3-7,11-19,21-55,61-83
+checkpoints/05-email/components/QuestionForm.tsx
+  s_a19cf79f0428a2::t_ed6b54ecc85412 1,5-6,10,12-13,16-65
+checkpoints/05-email/components/RealtimeQuestionQueue.tsx
+  s_65bcac108e1886::t_de89c7fd6d36a6 1-123
+checkpoints/05-email/db/migrations/20261016072902_blushing_hellfire_club.sql
+  s_3498ab18753c7d::t_515e4c35287f67 1-74
+checkpoints/05-email/db/migrations/20261016102836_light_scarlet_spider.sql
+  s_3498ab18753c7d::t_7dc68f1cc9ae5b 1-3
+checkpoints/05-email/db/migrations/20261016145930_strong_iron_man.sql
+  s_3498ab18753c7d::t_cc157f32f14d21 1-3
+checkpoints/05-email/db/migrations/meta/20261016072902_snapshot.json
+  s_3498ab18753c7d::t_f6a274c5535414 1-486
+checkpoints/05-email/db/migrations/meta/20261016102836_snapshot.json
+  s_3498ab18753c7d::t_56d9bd529e78fa 1-448
+checkpoints/05-email/db/migrations/meta/20261016145930_snapshot.json
+  s_3498ab18753c7d::t_1506737f125ed4 1-403
+checkpoints/05-email/db/migrations/meta/_journal.json
+  s_3498ab18753c7d::t_c1a2efebf183e5 1-27
+checkpoints/05-email/lib/question-summary-email.ts
+  s_65bcac108e1886::t_e930b71dfcdfe2 18
+checkpoints/05-email/lib/questions.ts
+  s_3498ab18753c7d::t_8d42316a1aa7f2 2,4,6-7,11-33
+checkpoints/05-email/package.json
+  s_65bcac108e1886::t_33bfafa3b38729 1-25
+checkpoints/05-email/pages/index.server.ts
+  s_3498ab18753c7d::t_e76e7488449738 3,22,27,29,34-37,41
+checkpoints/05-email/pages/index.tsx
+  s_3498ab18753c7d::t_ecb5bb2838fbc0 11
+checkpoints/05-email/pages/login.tsx
+  s_3498ab18753c7d::t_afc76a0fbc8202 9
+checkpoints/05-email/routes/questions.ws.ts
+  s_3498ab18753c7d::t_00dc997c495646 10,17,38,47,51
+checkpoints/05-email/styles/app.css
+  s_3498ab18753c7d::t_9f161a58368236 109-126,416-417,421-426
+checkpoints/05-email/tsconfig.json
+  s_c66eb7a760c6f7::t_da4367b648fe36 2,6-10,22-26,28-40
+checkpoints/05-email/void.config.ts
+  s_65bcac108e1886::t_51e4e592bee81f 1-21
+checkpoints/06-ai/README.md
+  s_c66eb7a760c6f7::t_f8af7b1aeba5b1 1,3,5-7,11-19,23-101
+checkpoints/06-ai/components/AuthPanel.tsx
+  s_83b9c0c8861e7f::t_1ae53fbe164f16 17-28,48,66,71-77,80
+checkpoints/06-ai/components/EmailSummaryButton.tsx
+  s_83b9c0c8861e7f::t_9d4bb9d36db755 1-76
+checkpoints/06-ai/components/QuestionForm.tsx
+  s_83b9c0c8861e7f::t_acf0c79a0e4595 1,5-6,10,12-13,16-65
+checkpoints/06-ai/components/RealtimeQuestionQueue.tsx
+  s_c66eb7a760c6f7::t_e0a8051b55161d 17,47,55,57-58,68-97,127,132-136,140,156,161,175,194
+checkpoints/06-ai/db/migrations/20261016072953_eminent_firestar.sql
+  s_3498ab18753c7d::t_0de0f2b17e22d8 1-74
+checkpoints/06-ai/db/migrations/20261016102836_brave_millenium_guard.sql
+  s_3498ab18753c7d::t_66ade0f46062a0 1-3
+checkpoints/06-ai/db/migrations/20261016145930_robust_spencer_smythe.sql
+  s_3498ab18753c7d::t_d643c8c1c39bee 1-3
+checkpoints/06-ai/db/migrations/20261016163719_fine_george_stacy.sql
+  s_3498ab18753c7d::t_cfabdde3e6ee8d 1-2
+checkpoints/06-ai/db/migrations/meta/20261016072953_snapshot.json
+  s_3498ab18753c7d::t_b2a1c4489a566f 1-486
+checkpoints/06-ai/db/migrations/meta/20261016102836_snapshot.json
+  s_3498ab18753c7d::t_28062837aaa468 1-448
+checkpoints/06-ai/db/migrations/meta/20261016145930_snapshot.json
+  s_3498ab18753c7d::t_86d5c327bb4a4c 1-403
+checkpoints/06-ai/db/migrations/meta/20261016163719_snapshot.json
+  s_3498ab18753c7d::t_6b6841970f6a8b 1-417
+checkpoints/06-ai/db/migrations/meta/_journal.json
+  s_3498ab18753c7d::t_4f33ea5162dab0 1-34
+checkpoints/06-ai/db/schema.ts
+  s_c66eb7a760c6f7::t_4183a5075d5067 2,8-9
+checkpoints/06-ai/lib/question-summary-email.ts
+  s_65bcac108e1886::t_6003fda6527a05 1-35
+checkpoints/06-ai/lib/questions.ts
+  s_3498ab18753c7d::t_7721fb31a2fbbc 2,4,6-7,11-33
+checkpoints/06-ai/package.json
+  s_65bcac108e1886::t_1717ea1e5d556b 2,9-10
+checkpoints/06-ai/pages/index.server.ts
+  s_3498ab18753c7d::t_45a6452727bc0d 3,9-15,17-22,27
+checkpoints/06-ai/pages/index.tsx
+  s_3498ab18753c7d::t_4e062ef0797998 1,5,11,14-16
+checkpoints/06-ai/pages/login.server.ts
+  s_83b9c0c8861e7f::t_7b8194cf64f6ee 1-12
+checkpoints/06-ai/pages/login.tsx
+  s_3498ab18753c7d::t_1c9e626b15fad0 1-15
+checkpoints/06-ai/routes/api/question-summary-email.ts
+  s_65bcac108e1886::t_d818a0f92e1f6d 1-52
+checkpoints/06-ai/routes/api/sentiment.ts
+  s_c66eb7a760c6f7::t_39e58c007a0a0f 3-4,29,51,53-62,64-66,98-117
+checkpoints/06-ai/routes/questions.ws.ts
+  s_3498ab18753c7d::t_49200c4a53e7c4 10,17,38,47,51
+checkpoints/06-ai/styles/app.css
+  s_3498ab18753c7d::t_3770c11bac30d0 109-126,230,416-417,421-426
+checkpoints/06-ai/tsconfig.json
+  s_c66eb7a760c6f7::t_4ab54df924efe1 2,6-10,22-26,28-40
+checkpoints/07-queues/.gitignore
+  s_3498ab18753c7d::t_6a6c446198de01 1-6
+checkpoints/07-queues/.npmrc
+  s_d72d9403fe243e::t_3f9c60a76d0062 1
+checkpoints/07-queues/README.md
+  s_d72d9403fe243e::t_b46c10b80ae53b 1-105
+checkpoints/07-queues/components/AuthPanel.tsx
+  s_d72d9403fe243e::t_74dd88b364dd2c 1-140
+checkpoints/07-queues/components/EmailSummaryButton.tsx
+  s_d72d9403fe243e::t_3c02b96e78b1bf 1-76
+checkpoints/07-queues/components/QuestionCard.tsx
+  s_3498ab18753c7d::t_2402249a95faa5 1-45
+checkpoints/07-queues/components/QuestionForm.tsx
+  s_d72d9403fe243e::t_4bdbd52ee84774 1-67
+checkpoints/07-queues/components/QuestionList.tsx
+  s_3498ab18753c7d::t_841bcf28eba3d8 1-31
+checkpoints/07-queues/components/RealtimeQuestionQueue.tsx
+  s_c66eb7a760c6f7::t_62a2c41b848d8e 4,8-12,45-51,55,59,61-65,69,106-150,157,162,167,173,176-180,184,198,200,215,217,220-235
+checkpoints/07-queues/db/migrations/20261016072953_eminent_firestar.sql
+  s_3498ab18753c7d::t_bc5c0497c2b0e2 1-74
+checkpoints/07-queues/db/migrations/20261016102836_brave_millenium_guard.sql
+  s_3498ab18753c7d::t_a1eaf8092bb175 1-3
+checkpoints/07-queues/db/migrations/20261016145930_robust_spencer_smythe.sql
+  s_3498ab18753c7d::t_41fd38d44e87ba 1-3
+checkpoints/07-queues/db/migrations/20261016151255_good_patch.sql
+  s_c66eb7a760c6f7::t_d4166b7cf9974e 1-9
+checkpoints/07-queues/db/migrations/20261016163734_ancient_queen_noir.sql
+  s_c66eb7a760c6f7::t_3cbf793600e7fc 1-7
+checkpoints/07-queues/db/migrations/meta/20261016072953_snapshot.json
+  s_3498ab18753c7d::t_847d110850180b 1-486
+checkpoints/07-queues/db/migrations/meta/20261016102836_snapshot.json
+  s_3498ab18753c7d::t_ccf0accd420297 1-448
+checkpoints/07-queues/db/migrations/meta/20261016145930_snapshot.json
+  s_3498ab18753c7d::t_a3a0f579e851dc 1-403
+checkpoints/07-queues/db/migrations/meta/20261016151255_snapshot.json
+  s_3498ab18753c7d::t_28b19ec61e1eb7 1-471
+checkpoints/07-queues/db/migrations/meta/20261016163734_snapshot.json
+  s_3498ab18753c7d::t_75bb7dfe6c1892 1-485
+checkpoints/07-queues/db/migrations/meta/_journal.json
+  s_3498ab18753c7d::t_4d72e9b10e4758 1-41
+checkpoints/07-queues/db/schema.ts
+  s_c66eb7a760c6f7::t_847d50e36bb995 1-24
+checkpoints/07-queues/lib/classify-question.ts
+  s_d72d9403fe243e::t_3574862ac0da99 3,11,14-24,26-39,42-43,45
+checkpoints/07-queues/lib/question-summary-email.ts
+  s_d72d9403fe243e::t_e2cecb943d648e 1-35
+checkpoints/07-queues/lib/questions.ts
+  s_3498ab18753c7d::t_0c12ed2772a14f 1-33
+checkpoints/07-queues/package.json
+  s_d72d9403fe243e::t_b67062147f95fc 1-25
+checkpoints/07-queues/pages/index.server.ts
+  s_3498ab18753c7d::t_ed5ac9f97a47ea 1-42
+checkpoints/07-queues/pages/index.tsx
+  s_3498ab18753c7d::t_b2564527ba117d 1-19
+checkpoints/07-queues/pages/layout.tsx
+  s_3498ab18753c7d::t_47a0432804326d 1-10
+checkpoints/07-queues/pages/login.server.ts
+  s_d72d9403fe243e::t_e666ee16838694 1-12
+checkpoints/07-queues/pages/login.tsx
+  s_3498ab18753c7d::t_045b95e89078ec 1-15
+checkpoints/07-queues/queues/sentiment.ts
+  s_d72d9403fe243e::t_d0aff9beb59e42 1-72
+checkpoints/07-queues/routes/api/question-summary-email.ts
+  s_d72d9403fe243e::t_c4d5d4868b1687 1-52
+checkpoints/07-queues/routes/api/sentiment.ts
+  s_c66eb7a760c6f7::t_22de54280c46d9 1-64
+checkpoints/07-queues/routes/questions.ws.ts
+  s_3498ab18753c7d::t_922bd8c95d19eb 1-58
+checkpoints/07-queues/styles/app.css
+  s_3498ab18753c7d::t_efac5631ec706f 1-438
+checkpoints/07-queues/tsconfig.json
+  s_c66eb7a760c6f7::t_4582a73af44fff 1-41
+checkpoints/07-queues/vite.config.ts
+  s_3498ab18753c7d::t_135699a880b3a7 1-7
+checkpoints/07-queues/void.config.ts
+  s_3498ab18753c7d::t_9c267b7c369701 12-14,19
+checkpoints/08-cron/.gitignore
+  s_3498ab18753c7d::t_acdd4baea0427c 1-6
+checkpoints/08-cron/.npmrc
+  s_65bcac108e1886::t_230868ed2ed915 1
+checkpoints/08-cron/README.md
+  s_298fb973d3b668::t_68fa5c6038f6e6 1-117
+checkpoints/08-cron/components/AuthPanel.tsx
+  s_65bcac108e1886::t_3bfe3820a3ee9f 1-140
+checkpoints/08-cron/components/EmailSummaryButton.tsx
+  s_65bcac108e1886::t_29fb85f513da5b 1-76
+checkpoints/08-cron/components/QuestionCard.tsx
+  s_3498ab18753c7d::t_30d195f64097a4 1-45
+checkpoints/08-cron/components/QuestionForm.tsx
+  s_65bcac108e1886::t_0788fca2ea88dd 1-67
+checkpoints/08-cron/components/QuestionList.tsx
+  s_3498ab18753c7d::t_d6e32a495f30e6 1-31
+checkpoints/08-cron/components/RealtimeQuestionQueue.tsx
+  s_c66eb7a760c6f7::t_59a87e54fa5718 1-241
+checkpoints/08-cron/db/migrations/20261016072953_eminent_firestar.sql
+  s_3498ab18753c7d::t_00db8ef7f5ffde 1-74
+checkpoints/08-cron/db/migrations/20261016102836_brave_millenium_guard.sql
+  s_3498ab18753c7d::t_8fe102685c8fe3 1-3
+checkpoints/08-cron/db/migrations/20261016151308_large_phalanx.sql
+  s_c66eb7a760c6f7::t_4ef654c0805a3b 1-9
+checkpoints/08-cron/db/migrations/20261016163734_huge_spencer_smythe.sql
+  s_c66eb7a760c6f7::t_c2fa7343b3f620 1-7
+checkpoints/08-cron/db/migrations/meta/20261016072953_snapshot.json
+  s_3498ab18753c7d::t_5b0667ac554a4e 1-486
+checkpoints/08-cron/db/migrations/meta/20261016102836_snapshot.json
+  s_3498ab18753c7d::t_e306da832ea996 1-448
+checkpoints/08-cron/db/migrations/meta/20261016151308_snapshot.json
+  s_3498ab18753c7d::t_9c708affeeb0ad 1-516
+checkpoints/08-cron/db/migrations/meta/20261016163734_snapshot.json
+  s_3498ab18753c7d::t_7f62ad634e7e51 1-530
+checkpoints/08-cron/db/migrations/meta/20261017230719_snapshot.json
+  s_3498ab18753c7d::t_9bc03f488ddaea 1-485
+checkpoints/08-cron/db/migrations/meta/_journal.json
+  s_3498ab18753c7d::t_04386d854df1f7 1-41
+checkpoints/08-cron/db/schema.ts
+  s_3498ab18753c7d::t_e966df2d40e3dd 1-24
+checkpoints/08-cron/lib/classify-question.ts
+  s_d72d9403fe243e::t_253f22c63074ff 3,11,14-24,26-39,42-43,45
+checkpoints/08-cron/lib/question-summary-email.ts
+  s_65bcac108e1886::t_6d3676d928f2bf 1-35
+checkpoints/08-cron/lib/questions.ts
+  s_3498ab18753c7d::t_1b81362a70a193 1-33
+checkpoints/08-cron/package.json
+  s_298fb973d3b668::t_401e9421db229a 2,9-10
+checkpoints/08-cron/pages/index.server.ts
+  s_3498ab18753c7d::t_1bb4ac473a89eb 1-42
+checkpoints/08-cron/pages/index.tsx
+  s_298fb973d3b668::t_3cacc02d43cdc8 1-19
+checkpoints/08-cron/pages/layout.tsx
+  s_3498ab18753c7d::t_d4bc7671b14c46 1-10
+checkpoints/08-cron/pages/login.server.ts
+  s_65bcac108e1886::t_c92792508aec2f 1-12
+checkpoints/08-cron/pages/login.tsx
+  s_3498ab18753c7d::t_a8b15f7d930e19 1-15
+checkpoints/08-cron/queues/sentiment.ts
+  s_d72d9403fe243e::t_89e55677b8e2d1 1-72
+checkpoints/08-cron/routes/api/question-summary-email.ts
+  s_65bcac108e1886::t_27666f7787711e 1-52
+checkpoints/08-cron/routes/api/sentiment.ts
+  s_c66eb7a760c6f7::t_9a571899071bbc 1-64
+checkpoints/08-cron/routes/questions.ws.ts
+  s_3498ab18753c7d::t_4ebdf0f04db9b9 1-58
+checkpoints/08-cron/styles/app.css
+  s_3498ab18753c7d::t_aeb8b22be775ea 1-438
+checkpoints/08-cron/tsconfig.json
+  s_c66eb7a760c6f7::t_ea09c0fd5ed2ef 1-41
+checkpoints/08-cron/vite.config.ts
+  s_3498ab18753c7d::t_943f89162ae787 1-7
+checkpoints/08-cron/void.config.ts
+  s_3498ab18753c7d::t_20da62696de7db 1-22
+working-repo/README.md
+  s_65bcac108e1886::t_8ac8fb665c4fbe 7-10,15-51
+working-repo/components/EmailSummaryButton.tsx
+  s_a19cf79f0428a2::t_d1db1b5d8dd590 1-76
+working-repo/pages/index.tsx
+  s_3498ab18753c7d::t_0a02692f920576 49
+working-repo/styles/app.css
+  s_3498ab18753c7d::t_b8f9aa28cec497 109-126,416-417,421-426
+working-repo/tsconfig.json
+  s_c66eb7a760c6f7::t_190e5f841a8c5d 2,6-10,22-26,28-40
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "b8f5ce960aa895927392694808b8fd26268e2ef3",
+  "prompts": {},
+  "sessions": {
+    "s_298fb973d3b668": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a14c1c-92e9-73e2-b5db-f0806fdc8b5b",
+        "model": "gpt-6-astra"
+      },
+      "human_author": "mdong <mdong@cloudflare.com>"
+    },
+    "s_3498ab18753c7d": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a14fd1-efeb-75a2-b24f-7060e712dfd7",
+        "model": "gpt-6-astra"
+      },
+      "human_author": "mdong <mdong@cloudflare.com>"
+    },
+    "s_65bcac108e1886": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a14399-eb3d-7db0-bcc8-82d68033b2a2",
+        "model": "gpt-6-astra"
+      },
+      "human_author": "mdong <mdong@cloudflare.com>"
+    },
+    "s_83b9c0c8861e7f": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a14387-04b6-78f2-9820-5814eda343bb",
+        "model": "gpt-6-astra"
+      },
+      "human_author": "mdong <mdong@cloudflare.com>"
+    },
+    "s_a19cf79f0428a2": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a14323-3121-7db0-93be-8f4e2ef19809",
+        "model": "gpt-5.6-sol"
+      },
+      "human_author": "mdong <mdong@cloudflare.com>"
+    },
+    "s_c66eb7a760c6f7": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a14569-d966-74f3-84d1-04729d4a17b1",
+        "model": "gpt-6-astra"
+      },
+      "human_author": "mdong <mdong@cloudflare.com>"
+    },
+    "s_d72d9403fe243e": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a1452e-fff2-7f10-ab8a-050c2f56b672",
+        "model": "gpt-6-astra"
+      },
+      "human_author": "mdong <mdong@cloudflare.com>"
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "version": "7",
+  "dialect": "sqlite",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "6",
+      "when": 1792144178110,
+      "tag": "20261016094938_flowery_war_machine",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "6",
+      "when": 1792162770191,
+      "tag": "20261016145930_rare_purple_man",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "6",
+      "when": 1792434685490,
+      "tag": "20261019183125_needy_nova",
+      "breakpoints": true
+    }
+  ]
+}

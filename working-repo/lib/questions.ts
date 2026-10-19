@@ -5,6 +5,7 @@ export type Question = {
   authorName?: string | null;
   userId?: string | null;
   votes?: number;
+  imageKey?: string | null;
   createdAt: string;
 };
 
@@ -31,4 +32,3 @@ export const sampleQuestions: Question[] = [
     createdAt: "4 min ago",
   },
 ];
-

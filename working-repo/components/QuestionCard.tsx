@@ -27,6 +27,14 @@ export function QuestionCard({ question, sentiment }: QuestionCardProps) {
     <li className="questionCard">
       <div className="questionContent">
         <p className="questionText">{question.text}</p>
+        {question.imageKey ? (
+          <img
+            className="questionImage"
+            src={`/images/${encodeURIComponent(question.imageKey)}`}
+            alt={`Attachment for: ${question.text}`}
+            loading="lazy"
+          />
+        ) : null}
         <p className="questionMeta">
           {author ? `${author} · ` : ""}
           {question.createdAt}
@@ -43,4 +51,3 @@ export function QuestionCard({ question, sentiment }: QuestionCardProps) {
     </li>
   );
 }
-

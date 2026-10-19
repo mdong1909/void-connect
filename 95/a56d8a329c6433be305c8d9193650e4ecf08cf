@@ -1,0 +1,281 @@
+README.md
+  s_8f33cdba7819d2::t_95a4eb65533de2 13-19,37-43,47,49,51
+checkpoints/02-database/components/ImageQuestionForm.tsx
+  s_8f33cdba7819d2::t_3f8d88684c6a06 1-139
+checkpoints/02-database/components/QuestionCard.tsx
+  s_8f33cdba7819d2::t_ab5644a88fabc2 30-37
+checkpoints/02-database/lib/questions.ts
+  s_8f33cdba7819d2::t_99202526e20116 8
+checkpoints/02-database/styles/app.css
+  s_8f33cdba7819d2::t_c16d64573ae03f 4,16,436-473
+checkpoints/03-storage/README.md
+  s_8f33cdba7819d2::t_3ff06ade89b938 1,3,5
+checkpoints/03-storage/components/ImageQuestionForm.tsx
+  s_8f33cdba7819d2::t_28e8f817a6f4cc 1-139
+checkpoints/03-storage/components/QuestionCard.tsx
+  s_8f33cdba7819d2::t_3f8a8df0655f31 30-37
+checkpoints/03-storage/db/migrations/20261019183113_groovy_fixer.sql
+  s_8f33cdba7819d2::t_0fba407451cdaa 1
+checkpoints/03-storage/db/migrations/meta/20261016094938_snapshot.json
+  s_8f33cdba7819d2::t_c18fc64bf0d3ff 1-58
+checkpoints/03-storage/db/migrations/meta/20261019183113_snapshot.json
+  s_8f33cdba7819d2::t_619b19f7f34efe 1-65
+checkpoints/03-storage/db/migrations/meta/_journal.json
+  s_8f33cdba7819d2::t_b8ba85be60bebb 1-20
+checkpoints/03-storage/db/schema.ts
+  s_8f33cdba7819d2::t_dc7f78e665ef6f 8
+checkpoints/03-storage/lib/questions.ts
+  s_8f33cdba7819d2::t_a1e962e3a90e93 8
+checkpoints/03-storage/package.json
+  s_8f33cdba7819d2::t_4b78ac4f120dec 1-25
+checkpoints/03-storage/pages/index.server.ts
+  s_8f33cdba7819d2::t_eeb3859846f3a9 3,9-24,32-34,36,38-39,42-63,65-72
+checkpoints/03-storage/pages/index.tsx
+  s_8f33cdba7819d2::t_1cf2edd090e1a1 1-51
+checkpoints/03-storage/routes/.gitkeep
+  s_8f33cdba7819d2::t_1b1c26ec12d58b 1
+checkpoints/03-storage/routes/images/[key].ts
+  s_8f33cdba7819d2::t_aa368c87d1a5fe 1-18
+checkpoints/03-storage/styles/app.css
+  s_8f33cdba7819d2::t_1ce486740f1f06 4,16,436-473
+checkpoints/03-storage/void.config.ts
+  s_8f33cdba7819d2::t_70f07ad4823ec8 15
+checkpoints/04-websockets/components/ImageQuestionForm.tsx
+  s_8f33cdba7819d2::t_946d768b415886 1-139
+checkpoints/04-websockets/components/QuestionCard.tsx
+  s_8f33cdba7819d2::t_606e4e0d214c13 30-37
+checkpoints/04-websockets/components/RealtimeQuestionQueue.tsx
+  s_8f33cdba7819d2::t_a9d9751899b43b 4,18,20,59,72-78,80,89-93
+checkpoints/04-websockets/db/migrations/20261016094938_eager_maverick.sql
+  s_8f33cdba7819d2::t_0b9d1bc7c7db52 1-6
+checkpoints/04-websockets/db/migrations/20261019183125_lucky_wildside.sql
+  s_8f33cdba7819d2::t_5528313804e462 1
+checkpoints/04-websockets/db/migrations/meta/20261019183125_snapshot.json
+  s_8f33cdba7819d2::t_98e0e6551e1b10 1-65
+checkpoints/04-websockets/db/migrations/meta/_journal.json
+  s_8f33cdba7819d2::t_00f51f332b4639 11-17,20
+checkpoints/04-websockets/db/schema.ts
+  s_8f33cdba7819d2::t_46f6b456ba07ac 8
+checkpoints/04-websockets/lib/questions.ts
+  s_8f33cdba7819d2::t_9e96dc0308ac69 8
+checkpoints/04-websockets/package.json
+  s_8f33cdba7819d2::t_ab704f6ed93ee3 2
+checkpoints/04-websockets/pages/index.server.ts
+  s_8f33cdba7819d2::t_e7fd5c00e78d04 1-73
+checkpoints/04-websockets/routes/images/[key].ts
+  s_8f33cdba7819d2::t_f5fbd5f1c8934d 1-18
+checkpoints/04-websockets/routes/questions.ws.ts
+  s_8f33cdba7819d2::t_b56a1a086ddaae 6-8,14,18-21,31,34,36-37
+checkpoints/04-websockets/styles/app.css
+  s_8f33cdba7819d2::t_bb84260a692028 4,16,436-473
+checkpoints/04-websockets/void.config.ts
+  s_8f33cdba7819d2::t_9e53d51effcacc 1-18
+checkpoints/05-auth/README.md
+  s_8f33cdba7819d2::t_5184bb331fc56d 1,3,23,28,34,40
+checkpoints/05-auth/components/ImageQuestionForm.tsx
+  s_8f33cdba7819d2::t_003c46f3a7c365 1-139
+checkpoints/05-auth/components/QuestionCard.tsx
+  s_8f33cdba7819d2::t_cabb6b5c244d61 30-37
+checkpoints/05-auth/components/RealtimeQuestionQueue.tsx
+  s_8f33cdba7819d2::t_931a07bfae36be 4,13,15,51,64-70,72,81
+checkpoints/05-auth/db/migrations/20261019183125_needy_nova.sql
+  s_8f33cdba7819d2::t_68bfb27d75a3d1 1
+checkpoints/05-auth/db/migrations/meta/20261019183125_snapshot.json
+  s_8f33cdba7819d2::t_cd2448ecf2d038 1-410
+checkpoints/05-auth/db/migrations/meta/_journal.json
+  s_8f33cdba7819d2::t_4fc4bb2b3df25c 18-24,27
+checkpoints/05-auth/db/schema.ts
+  s_8f33cdba7819d2::t_3bc29b8391d762 8
+checkpoints/05-auth/lib/questions.ts
+  s_8f33cdba7819d2::t_9c0cb43c095295 8
+checkpoints/05-auth/package.json
+  s_8f33cdba7819d2::t_f38ef0dc67d33e 2
+checkpoints/05-auth/pages/index.server.ts
+  s_8f33cdba7819d2::t_dab4aad39abaa0 3-4,10-25,44-47,49-50,52,54-55,57-82
+checkpoints/05-auth/routes/images/[key].ts
+  s_8f33cdba7819d2::t_0dd17f478898e2 1-20
+checkpoints/05-auth/routes/questions.ws.ts
+  s_8f33cdba7819d2::t_a4cd75ff7687ea 6-8,14,18-21,28-30,34,37,39-40
+checkpoints/05-auth/styles/app.css
+  s_8f33cdba7819d2::t_b09c48e7281996 4,16,436-473
+checkpoints/05-auth/void.config.ts
+  s_8f33cdba7819d2::t_427ba42271c0ca 18
+checkpoints/06-email/README.md
+  s_8f33cdba7819d2::t_5441749759a0f7 1,3,23,28,34,40
+checkpoints/06-email/components/ImageQuestionForm.tsx
+  s_8f33cdba7819d2::t_b85a89efd4c9c1 1-139
+checkpoints/06-email/components/QuestionCard.tsx
+  s_8f33cdba7819d2::t_dc919e6c2dd9a8 30-37
+checkpoints/06-email/components/RealtimeQuestionQueue.tsx
+  s_8f33cdba7819d2::t_a487be5424e0bf 5,14,16,52,65-71,73,82
+checkpoints/06-email/db/migrations/20261019183125_cheerful_puma.sql
+  s_8f33cdba7819d2::t_82e42ac7322d02 1
+checkpoints/06-email/db/migrations/meta/20261019183125_snapshot.json
+  s_8f33cdba7819d2::t_b899338937c6cb 1-410
+checkpoints/06-email/db/migrations/meta/_journal.json
+  s_8f33cdba7819d2::t_191847df6a5b7b 25-31,34
+checkpoints/06-email/db/schema.ts
+  s_8f33cdba7819d2::t_a07a8811a2fd0e 1-12
+checkpoints/06-email/lib/questions.ts
+  s_8f33cdba7819d2::t_9f69ffc327170d 8
+checkpoints/06-email/package.json
+  s_8f33cdba7819d2::t_ddabfd398552bb 2
+checkpoints/06-email/pages/index.server.ts
+  s_8f33cdba7819d2::t_6f18870c67d6dc 3-4,10-25,44-47,49-50,52,54-55,57-82
+checkpoints/06-email/routes/images/[key].ts
+  s_8f33cdba7819d2::t_3bb2f5dd670ee3 1-20
+checkpoints/06-email/routes/questions.ws.ts
+  s_8f33cdba7819d2::t_c04069ad45bfab 6-8,14,18-21,28-30,34,37,39-40
+checkpoints/06-email/styles/app.css
+  s_8f33cdba7819d2::t_a255ccbc2889e4 4,16,436-473
+checkpoints/06-email/void.config.ts
+  s_8f33cdba7819d2::t_f0b31825b45875 18
+checkpoints/07-ai/README.md
+  s_8f33cdba7819d2::t_7331deb241941d 1,3,23,28,34,40
+checkpoints/07-ai/components/ImageQuestionForm.tsx
+  s_8f33cdba7819d2::t_b9057c16f427d7 1-139
+checkpoints/07-ai/components/QuestionCard.tsx
+  s_8f33cdba7819d2::t_0dae2ac8a38a96 1-53
+checkpoints/07-ai/components/RealtimeQuestionQueue.tsx
+  s_8f33cdba7819d2::t_8ce42c43ae9d14 5,14,16,96,109-115,117,152
+checkpoints/07-ai/db/migrations/20261019183126_tiresome_lilandra.sql
+  s_8f33cdba7819d2::t_f859e1d834af89 1
+checkpoints/07-ai/db/migrations/meta/20261019183126_snapshot.json
+  s_8f33cdba7819d2::t_7298bde303e08b 1-424
+checkpoints/07-ai/db/migrations/meta/_journal.json
+  s_8f33cdba7819d2::t_dcaa06e27b6bbd 32-38,41
+checkpoints/07-ai/db/schema.ts
+  s_8f33cdba7819d2::t_7e961910ed9ea6 8
+checkpoints/07-ai/lib/questions.ts
+  s_8f33cdba7819d2::t_d3cfb3d1a03251 1-34
+checkpoints/07-ai/package.json
+  s_8f33cdba7819d2::t_afafda0bebef05 2
+checkpoints/07-ai/pages/index.server.ts
+  s_8f33cdba7819d2::t_ba7a899fd4ff05 3-4,10-25,44-47,49-50,52,54-55,57-82
+checkpoints/07-ai/routes/images/[key].ts
+  s_8f33cdba7819d2::t_f5570bc6b36db8 1-20
+checkpoints/07-ai/routes/questions.ws.ts
+  s_8f33cdba7819d2::t_0d81c6f9a50180 6-8,14,18-21,28-30,34,37,39-40
+checkpoints/07-ai/styles/app.css
+  s_8f33cdba7819d2::t_52177b90cdb454 1-473
+checkpoints/07-ai/void.config.ts
+  s_8f33cdba7819d2::t_a3a62a51dde542 18
+checkpoints/08-queues/README.md
+  s_8f33cdba7819d2::t_5bb5479de9420c 1,3,5,25,30,36,42
+checkpoints/08-queues/components/ImageQuestionForm.tsx
+  s_8f33cdba7819d2::t_c0d93ed48cab36 1-139
+checkpoints/08-queues/components/QuestionCard.tsx
+  s_8f33cdba7819d2::t_028c238257a480 1-53
+checkpoints/08-queues/components/RealtimeQuestionQueue.tsx
+  s_8f33cdba7819d2::t_b31f582bf2c11d 5,14,16,73,131-137,139,175
+checkpoints/08-queues/db/migrations/20261019183126_useful_harpoon.sql
+  s_8f33cdba7819d2::t_df5c6063503f55 1
+checkpoints/08-queues/db/migrations/meta/20261019183126_snapshot.json
+  s_8f33cdba7819d2::t_51c461f51b68bf 1-492
+checkpoints/08-queues/db/migrations/meta/_journal.json
+  s_8f33cdba7819d2::t_87b4e2b32beca4 39-45,48
+checkpoints/08-queues/db/schema.ts
+  s_8f33cdba7819d2::t_b34a749c511e50 8
+checkpoints/08-queues/lib/questions.ts
+  s_8f33cdba7819d2::t_25152895880098 1-34
+checkpoints/08-queues/package.json
+  s_8f33cdba7819d2::t_4422f24cffbaa9 2
+checkpoints/08-queues/pages/index.server.ts
+  s_8f33cdba7819d2::t_c2761afa515bb8 3-4,10-25,44-47,49-50,52,54-55,57-82
+checkpoints/08-queues/routes/images/[key].ts
+  s_8f33cdba7819d2::t_33e759391df416 1-20
+checkpoints/08-queues/routes/questions.ws.ts
+  s_8f33cdba7819d2::t_ea1612421e7f51 1-43
+checkpoints/08-queues/styles/app.css
+  s_8f33cdba7819d2::t_1e9dfb54c7632c 1-473
+checkpoints/08-queues/void.config.ts
+  s_8f33cdba7819d2::t_c8a6174088c700 18
+checkpoints/09-cron/.gitignore
+  s_3498ab18753c7d::t_da612bc5805c1a 1-6
+checkpoints/09-cron/.npmrc
+  s_65bcac108e1886::t_9daec47b21db12 1
+checkpoints/09-cron/README.md
+  s_8f33cdba7819d2::t_248119aac3ec04 1,3,5,25,30,36,42
+checkpoints/09-cron/components/AuthPanel.tsx
+  s_8f33cdba7819d2::t_d19fff1a076fd2 1-140
+checkpoints/09-cron/components/EmailSummaryButton.tsx
+  s_8f33cdba7819d2::t_9991a754d11212 1-76
+checkpoints/09-cron/components/ImageQuestionForm.tsx
+  s_8f33cdba7819d2::t_95e85cf4331504 1-139
+checkpoints/09-cron/components/QuestionCard.tsx
+  s_8f33cdba7819d2::t_a77e23c8fc5c91 1-53
+checkpoints/09-cron/components/QuestionForm.tsx
+  s_8f33cdba7819d2::t_d75babeb2c00ed 1-67
+checkpoints/09-cron/components/QuestionList.tsx
+  s_8f33cdba7819d2::t_271166a58e2e01 2,4-12,15-17,21-29
+checkpoints/09-cron/components/RealtimeQuestionQueue.tsx
+  s_8f33cdba7819d2::t_e23092939500c9 5,14,16,73,131-137,139,175
+checkpoints/09-cron/db/migrations/20261019183127_gigantic_outlaw_kid.sql
+  s_8f33cdba7819d2::t_d1ea4dc0c812ea 1
+checkpoints/09-cron/db/migrations/meta/20261019183127_snapshot.json
+  s_8f33cdba7819d2::t_0e96787c9534e8 1-492
+checkpoints/09-cron/db/migrations/meta/_journal.json
+  s_8f33cdba7819d2::t_421d118cd321a4 39-45,48
+checkpoints/09-cron/db/schema.ts
+  s_8f33cdba7819d2::t_73abdd114f8990 8
+checkpoints/09-cron/lib/questions.ts
+  s_8f33cdba7819d2::t_f0de1ff1dea61b 1-34
+checkpoints/09-cron/package.json
+  s_8f33cdba7819d2::t_97d4e0ec07f631 2
+checkpoints/09-cron/pages/index.server.ts
+  s_8f33cdba7819d2::t_93a93552fae7c9 1-83
+checkpoints/09-cron/pages/layout.tsx
+  s_8f33cdba7819d2::t_eeb1590a1318b4 1-10
+checkpoints/09-cron/routes/images/[key].ts
+  s_8f33cdba7819d2::t_45444b8ed4acd4 1-20
+checkpoints/09-cron/routes/questions.ws.ts
+  s_8f33cdba7819d2::t_8e8360c4588231 1-43
+checkpoints/09-cron/styles/app.css
+  s_8f33cdba7819d2::t_acc34c3e03387d 1-473
+checkpoints/09-cron/tsconfig.json
+  s_8f33cdba7819d2::t_1926f5dd434c38 1-41
+checkpoints/09-cron/vite.config.ts
+  s_8f33cdba7819d2::t_35a87188ce9eaa 1-7
+checkpoints/09-cron/void.config.ts
+  s_8f33cdba7819d2::t_0737eb5443d8eb 18
+working-repo/components/ImageQuestionForm.tsx
+  s_8f33cdba7819d2::t_b3d6af6881892b 1-139
+working-repo/components/QuestionCard.tsx
+  s_8f33cdba7819d2::t_403dc2b378ff06 30-37
+working-repo/lib/questions.ts
+  s_8f33cdba7819d2::t_9adf2c08161b3b 8
+working-repo/styles/app.css
+  s_8f33cdba7819d2::t_acd3a2c2687826 4,16,436-473
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "95a56d8a329c6433be305c8d9193650e4ecf08cf",
+  "prompts": {},
+  "sessions": {
+    "s_3498ab18753c7d": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a14fd1-efeb-75a2-b24f-7060e712dfd7",
+        "model": "gpt-6-astra"
+      },
+      "human_author": "mdong <mdong@cloudflare.com>"
+    },
+    "s_65bcac108e1886": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a14399-eb3d-7db0-bcc8-82d68033b2a2",
+        "model": "gpt-6-astra"
+      },
+      "human_author": "mdong <mdong@cloudflare.com>"
+    },
+    "s_8f33cdba7819d2": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a1555b-3beb-7753-9aef-f6e112d2a465",
+        "model": "gpt-6-astra"
+      },
+      "human_author": "mdong <mdong@cloudflare.com>"
+    }
+  }
+}

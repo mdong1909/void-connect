@@ -19,6 +19,8 @@ checkpoints/
   09-cron/
 ```
 
+Every app folder includes the source directories used throughout the workshop. Empty directories have `.gitkeep` files so GitHub preserves the layout; the downloadable ZIP extracts them as empty directories.
+
 Start with:
 
 ```bash

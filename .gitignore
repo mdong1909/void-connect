@@ -1,6 +1,7 @@
 node_modules
 dist
 .void
+.cloudflare
 .void-wrangler.jsonc
 void.lock.json
 .env

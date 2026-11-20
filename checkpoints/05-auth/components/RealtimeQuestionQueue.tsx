@@ -4,11 +4,16 @@ import type { Question } from "../lib/questions";
 import { ImageQuestionForm as QuestionForm } from "./ImageQuestionForm";
 import { QuestionList } from "./QuestionList";
 
-type User = {
-  id: string;
-  name?: string | null;
-  email?: string | null;
-};
+const adjectives = ["Bright", "Curious", "Helpful", "Kind", "Sharp", "Sunny"];
+const nouns = ["Builder", "Coder", "Guest", "Maker", "Reader", "Visitor"];
+
+function createUsername() {
+  const adjective = adjectives[Math.floor(Math.random() * adjectives.length)];
+  const noun = nouns[Math.floor(Math.random() * nouns.length)];
+  const number = Math.floor(100 + Math.random() * 900);
+
+  return `${adjective}${noun}${number}`;
+}
 
 type ClientMessage = { type: "questions.refresh" };
 
@@ -23,25 +28,31 @@ type QuestionSocket = {
   on(type: "error", handler: (error: unknown) => void): () => void;
 };
 
+// Prepared queues ship before the WebSocket lesson creates this route.
+const connectQuestions = connect as unknown as (url: "/questions") => QuestionSocket;
+
 type RealtimeQuestionQueueProps = {
-  user: User;
   initialQuestions: Question[];
 };
 
-export function RealtimeQuestionQueue({ user, initialQuestions }: RealtimeQuestionQueueProps) {
+export function RealtimeQuestionQueue({ initialQuestions }: RealtimeQuestionQueueProps) {
   const [questions, setQuestions] = useState(initialQuestions);
   const [status, setStatus] = useState<"offline" | "connecting" | "connected">("offline");
+  const [username, setUsername] = useState("");
   const socketRef = useRef<QuestionSocket | null>(null);
-  const displayName = user.email || user.name || "Site visitor";
 
   useEffect(() => {
     setQuestions(initialQuestions);
   }, [initialQuestions]);
 
   useEffect(() => {
+    setUsername(createUsername());
+  }, []);
+
+  useEffect(() => {
     setStatus("connecting");
 
-    const socket = connect("/questions") as QuestionSocket;
+    const socket = connectQuestions("/questions");
     socketRef.current = socket;
 
     const unsubscribeOpen = socket.on("open", () => setStatus("connected"));
@@ -78,18 +89,20 @@ export function RealtimeQuestionQueue({ user, initialQuestions }: RealtimeQuesti
           <h2>Ask a Question</h2>
           <span>{statusLabel}</span>
         </div>
-        <QuestionForm authorName={displayName} onSubmitted={notifyOtherTabs} />
+        <QuestionForm
+          authorName={username || "Anonymous Visitor"}
+          allowImages
+          onSubmitted={notifyOtherTabs}
+        />
         <p className="postingIdentity">
-          Posting as <strong>{displayName}</strong>
+          Posting as <strong>{username || "Assigning name"}</strong>
         </p>
       </section>
 
       <section className="panel">
         <div className="sectionHeader">
           <h2>Current Questions</h2>
-          <div className="sectionActions">
-            <span>{questions.length} total</span>
-          </div>
+          <span>{questions.length} total</span>
         </div>
         <QuestionList questions={questions} />
       </section>

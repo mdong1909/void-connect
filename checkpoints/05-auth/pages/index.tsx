@@ -1,5 +1,5 @@
 import { AuthPanel } from "../components/AuthPanel";
-import { RealtimeQuestionQueue } from "../components/RealtimeQuestionQueue";
+import { AuthenticatedQuestionQueue as RealtimeQuestionQueue } from "../components/AuthenticatedQuestionQueue";
 import type { Props } from "./index.server";
 
 export default function Page({ user, questions }: Props) {

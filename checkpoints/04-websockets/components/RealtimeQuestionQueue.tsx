@@ -28,6 +28,9 @@ type QuestionSocket = {
   on(type: "error", handler: (error: unknown) => void): () => void;
 };
 
+// Prepared queues ship before the WebSocket lesson creates this route.
+const connectQuestions = connect as unknown as (url: "/questions") => QuestionSocket;
+
 type RealtimeQuestionQueueProps = {
   initialQuestions: Question[];
 };
@@ -49,7 +52,7 @@ export function RealtimeQuestionQueue({ initialQuestions }: RealtimeQuestionQueu
   useEffect(() => {
     setStatus("connecting");
 
-    const socket = connect("/questions") as QuestionSocket;
+    const socket = connectQuestions("/questions");
     socketRef.current = socket;
 
     const unsubscribeOpen = socket.on("open", () => setStatus("connected"));

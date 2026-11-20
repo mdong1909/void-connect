@@ -21,6 +21,8 @@ checkpoints/
 
 Every app folder includes the source directories used throughout the workshop. Empty directories have `.gitkeep` files so GitHub preserves the layout; the downloadable ZIP extracts them as empty directories.
 
+The component variants for later lessons are also included in every app folder. Lessons activate them by changing imports in `pages/index.tsx`.
+
 Start with:
 
 ```bash

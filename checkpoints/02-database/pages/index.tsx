@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { QuestionForm } from "../components/QuestionForm";
+import { DatabaseQuestionForm as QuestionForm } from "../components/DatabaseQuestionForm";
 import { QuestionList } from "../components/QuestionList";
 import type { Props } from "./index.server";
 

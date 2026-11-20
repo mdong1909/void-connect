@@ -29,4 +29,3 @@ export function QuestionList({ questions, sentiments = {} }: QuestionListProps) 
     </ul>
   );
 }
-

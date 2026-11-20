@@ -1,15 +1,19 @@
 import { useEffect, useRef, useState } from "react";
 import { connect } from "void/ws";
 import type { Question } from "../lib/questions";
-import { EmailSummaryButton } from "./EmailSummaryButton";
 import { ImageQuestionForm as QuestionForm } from "./ImageQuestionForm";
 import { QuestionList } from "./QuestionList";
 
-type User = {
-  id: string;
-  name?: string | null;
-  email?: string | null;
-};
+const adjectives = ["Bright", "Curious", "Helpful", "Kind", "Sharp", "Sunny"];
+const nouns = ["Builder", "Coder", "Guest", "Maker", "Reader", "Visitor"];
+
+function createUsername() {
+  const adjective = adjectives[Math.floor(Math.random() * adjectives.length)];
+  const noun = nouns[Math.floor(Math.random() * nouns.length)];
+  const number = Math.floor(100 + Math.random() * 900);
+
+  return `${adjective}${noun}${number}`;
+}
 
 type ClientMessage = { type: "questions.refresh" };
 
@@ -24,69 +28,31 @@ type QuestionSocket = {
   on(type: "error", handler: (error: unknown) => void): () => void;
 };
 
-type SentimentClassification = {
-  id: string;
-  label: string;
-  confidence: number | null;
-};
-
-type SentimentResponse = {
-  classifications: SentimentClassification[];
-  questionCount?: number;
-};
+// Prepared queues ship before the WebSocket lesson creates this route.
+const connectQuestions = connect as unknown as (url: "/questions") => QuestionSocket;
 
 type RealtimeQuestionQueueProps = {
-  user: User;
   initialQuestions: Question[];
 };
 
-export function RealtimeQuestionQueue({ user, initialQuestions }: RealtimeQuestionQueueProps) {
+export function RealtimeQuestionQueue({ initialQuestions }: RealtimeQuestionQueueProps) {
   const [questions, setQuestions] = useState(initialQuestions);
   const [status, setStatus] = useState<"offline" | "connecting" | "connected">("offline");
-  const [sentiments, setSentiments] = useState<Record<string, SentimentClassification>>({});
-  const [classifyError, setClassifyError] = useState("");
-  const [classifyPending, setClassifyPending] = useState(false);
+  const [username, setUsername] = useState("");
   const socketRef = useRef<QuestionSocket | null>(null);
-  const displayName = user.email || user.name || "Site visitor";
 
   useEffect(() => {
     setQuestions(initialQuestions);
   }, [initialQuestions]);
 
   useEffect(() => {
-    const controller = new AbortController();
-
-    async function loadSavedClassifications() {
-      try {
-        const response = await fetch("/api/sentiment", {
-          signal: controller.signal,
-          cache: "no-store",
-        });
-        if (!response.ok) throw new Error("Could not load saved classifications.");
-        const data = (await response.json()) as SentimentResponse;
-        if (controller.signal.aborted) return;
-        // A slower initial read must not replace results from a new classification.
-        setSentiments((current) => ({
-          ...Object.fromEntries(data.classifications.map((item) => [item.id, item])),
-          ...current,
-        }));
-      } catch (reason) {
-        if (!controller.signal.aborted) {
-          setClassifyError(
-            reason instanceof Error ? reason.message : "Could not load saved classifications.",
-          );
-        }
-      }
-    }
-
-    void loadSavedClassifications();
-    return () => controller.abort();
+    setUsername(createUsername());
   }, []);
 
   useEffect(() => {
     setStatus("connecting");
 
-    const socket = connect("/questions") as QuestionSocket;
+    const socket = connectQuestions("/questions");
     socketRef.current = socket;
 
     const unsubscribeOpen = socket.on("open", () => setStatus("connected"));
@@ -116,32 +82,6 @@ export function RealtimeQuestionQueue({ user, initialQuestions }: RealtimeQuesti
 
   const statusLabel = status === "connected" ? "Realtime connected" : "Questions still save";
 
-  async function classifyQuestions() {
-    setClassifyPending(true);
-    setClassifyError("");
-
-    try {
-      const response = await fetch("/api/sentiment", { method: "POST" });
-
-      if (!response.ok) {
-        throw new Error("Sentiment classification failed.");
-      }
-
-      const data = (await response.json()) as SentimentResponse;
-      setSentiments(
-        Object.fromEntries(
-          data.classifications.map((classification) => [classification.id, classification]),
-        ),
-      );
-    } catch (reason) {
-      setClassifyError(
-        reason instanceof Error ? reason.message : "Sentiment classification failed.",
-      );
-    } finally {
-      setClassifyPending(false);
-    }
-  }
-
   return (
     <>
       <section className="panel">
@@ -149,30 +89,22 @@ export function RealtimeQuestionQueue({ user, initialQuestions }: RealtimeQuesti
           <h2>Ask a Question</h2>
           <span>{statusLabel}</span>
         </div>
-        <QuestionForm authorName={displayName} onSubmitted={notifyOtherTabs} />
+        <QuestionForm
+          authorName={username || "Anonymous Visitor"}
+          allowImages
+          onSubmitted={notifyOtherTabs}
+        />
         <p className="postingIdentity">
-          Posting as <strong>{displayName}</strong>
+          Posting as <strong>{username || "Assigning name"}</strong>
         </p>
       </section>
 
       <section className="panel">
         <div className="sectionHeader">
           <h2>Current Questions</h2>
-          <div className="sectionActions">
-            <span>{questions.length} total</span>
-            <button
-              className="secondaryAction"
-              type="button"
-              onClick={classifyQuestions}
-              disabled={classifyPending || questions.length === 0}
-            >
-              {classifyPending ? "Classifying..." : "Classify"}
-            </button>
-            <EmailSummaryButton questionCount={questions.length} recipientEmail={user.email} />
-          </div>
+          <span>{questions.length} total</span>
         </div>
-        {classifyError ? <p className="errorText queueError">{classifyError}</p> : null}
-        <QuestionList questions={questions} sentiments={sentiments} />
+        <QuestionList questions={questions} />
       </section>
     </>
   );
